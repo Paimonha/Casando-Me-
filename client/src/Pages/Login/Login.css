@@ -1,0 +1,74 @@
+#P{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+#Cabecalho{
+    display: flex;
+    flex-direction: row;
+    height: 30vh;
+  
+}
+#Titulo{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+#Titulo span{
+    color: #F2DCD8;
+    font-size: 30px;
+    background-color: #262626;
+    margin-left: 370px;
+}
+#Logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 134px;
+}
+#Logo img{
+    height: 134px;
+}
+#Span{
+    border-radius: 15px;
+    text-align: center;
+    width: 20%;
+}
+
+ /* Login */
+#Login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+ height: 300px;
+}
+#Icone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+#Inputs{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+#Inputs input{
+    width: 460px;
+   
+    height: 68px;
+    border-radius: 28px;
+    background-color: #F2DCD8;
+    
+}
+#Inputs p{
+    text-align: center;
+}
