@@ -46,4 +46,5 @@
     font-style: normal;
     border: 1px solid #262626;
     box-shadow:  15px 15px 10px #262626;
+    cursor: pointer;
 }

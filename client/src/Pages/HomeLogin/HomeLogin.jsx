@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import Header from '../../../Components/Header'
 import Logo from './Logo.svg'
 import "./HomeLogin.css"
@@ -16,7 +16,10 @@ function HomeLogin() {
                     <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy </span>
                 </div>
                 <div id='botao'>
-                    <button>Acesse Agora</button>
+                  <Link to='/login'>
+                  <button>Acesse Agora</button>
+                  </Link>
+                    
 
                 </div>
 

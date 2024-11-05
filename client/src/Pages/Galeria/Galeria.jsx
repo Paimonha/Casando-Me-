@@ -1,6 +1,6 @@
 import Header from '../../../Components/Header'
-import "./Home.css"
-function Home(){
+import "./Galeria.css"
+function Galeria(){
     return(
         <>
         <div>
@@ -9,4 +9,4 @@ function Home(){
         </>
     )
 }
-export default Home
+export default Galeria
