@@ -8,22 +8,22 @@ function Header(){
         <header id="Header">
             <div id="Texto">
                 <Link to='/'> 
-                <span className="Span">Home </span>
+                <span className="Span"> <p>Home</p> </span>
                 </Link>
                 
                 <Link to='/login'>
-                <span className="Span">Fornecedores </span>
+                <span className="Span"> <p>Fornecedores</p> </span>
                 </Link>
 
                 <Link  to='/login'>
-                <span className="Span">Cerimônialista </span>
+                <span className="Span"> <p>Cerimônialista</p> </span>
                 </Link>
                 <Link  to='/login'>
-                <span className="Span">Galeria </span>
+                <span className="Span"> <p>Galeria</p> </span>
                 </Link >
 
                 <Link  to='/login'>
-                <span className="Span">Sobre </span>
+                <span className="Span"> <p>Sobre</p> </span>
                 </Link>
            
             
@@ -32,9 +32,9 @@ function Header(){
 
             </div>
             <div id="Svg">
-                
-                <FontAwesomeIcon id="Login" icon={faRightFromBracket} style={{color: "#f2dcd8",}} />
-                <Link to="/login"></Link>
+            <Link to="/login" >
+            <FontAwesomeIcon id="log" icon={faRightFromBracket} style={{color: "#f2dcd8",}} />
+                </Link>
             
 
             </div>

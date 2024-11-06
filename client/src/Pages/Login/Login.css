@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
+    background-color: #F2EEEB   ;
 }
 #Cabecalho{
     display: flex;
@@ -43,8 +44,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin-top: 40px;
     
  height: 300px;
+}
+#Login p{
+    font-size: 12px;
+    margin-left: 300px;
+   
+
 }
 #Icone{
     display: flex;
@@ -69,6 +78,14 @@
     background-color: #F2DCD8;
     
 }
-#Inputs p{
-    text-align: center;
+
+#BtnLogar button{
+    height: 70px;
+    width: 175px;
+    border-radius: 30px;
+    background-color: #262626;
+    color: #F2DCD8;
+    font-size: 20px;
+    font-family: "Inknut Antiqua", serif;
+
 }

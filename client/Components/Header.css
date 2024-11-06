@@ -8,34 +8,43 @@
     font-size: 24px;
 
 }
+
+a {
+    text-decoration: none;
+}
+
 #Texto{
     width: 70%;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-.Span{
+.Span p{
     cursor: pointer;
-    color:#F2DCD8;
-
+    color: #F2DCD8;
 }
-.Span :hover{
-    fill: aliceblue;
-    transition: 1s;
 
+.Span :hover {
+    transition: 2s;
+    color: #fff;
+ }
+#Login{
+  height: 10px;
 }
-#Texto span :hover{
-    background-color: aliceblue;
-    transition: 1s;
 
-}
 
 #Svg{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     width: 30%;
+    
 }
-#Login{
-    height: 40px;
+
+#log {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 30px;
+    
 }

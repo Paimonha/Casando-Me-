@@ -30,10 +30,14 @@ function Login() {
 
                         </div>
                         <p>Esqueci minha senha</p>
+                        
+                        <div id="BtnLogar">
+                            <button>Logar</button>
+
+                        </div>
+
 
                         
-                        
-
 
                     </div>
 
