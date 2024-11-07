@@ -9,6 +9,10 @@ import Cadastro from './Pages/Cadastro/Cadastro'
 import Galeria from './Pages/Galeria/Galeria'
 import Formulario from './Pages/Formulario/Formulario'
 import Admin from './Pages/Admin/Admin';
+import AdminU from './Pages/Admin/AdminU/AdminU'
+import AdminC from './Pages/Admin/AdminC/AdminC'
+import AdminF from './Pages/Admin/AdminF/AdminF'
+
 
 const router = createBrowserRouter([
   {
@@ -38,6 +42,18 @@ const router = createBrowserRouter([
   {
     path: "/admin",
     element: <Admin />,
+  },
+  {
+    path: "/adminu",
+    element: <AdminU />,
+  },
+  {
+    path: "/adminf",
+    element: <AdminF/>,
+  },
+  {
+    path: "/adminc",
+    element: <AdminC />,
   },
  
 
