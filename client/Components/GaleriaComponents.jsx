@@ -1,14 +1,12 @@
-
 import { useState } from "react";
 
 function Galerias({imagem }) {
-  
     return (
-      <div className="Card">
-        <img src={imagem} alt={imagem} className="Filtro" />
-      
-      </div>
-      
+      <>
+        <div className="Card">
+          <img src={imagem} alt={imagem} className="Filtro" />
+        </div>
+      </>
     );
   }
   

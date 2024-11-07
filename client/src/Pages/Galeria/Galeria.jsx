@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Header from "../../../Components/Header";
+import Header from '../../../Components/Header/Header'
 import "./Galeria.css";
 import Galerias from "../../../Components/GaleriaComponents";
 import GaleriaDados from "../../data/GaleriaDados";
