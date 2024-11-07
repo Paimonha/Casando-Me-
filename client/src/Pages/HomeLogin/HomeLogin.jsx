@@ -16,10 +16,10 @@ function HomeLogin() {
                     <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy </span>
                 </div>
                 <div id='botao'>
-                  <Link to='/login'>
-                  <button>Acesse Agora</button>
-                  </Link>
-                    
+                    <Link to='/login'>
+                        <button>Acesse Agora</button>
+                    </Link>
+
 
                 </div>
 

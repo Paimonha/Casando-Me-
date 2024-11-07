@@ -1,40 +1,45 @@
-#PCadastro{
+#PCadastro {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: #F2EEEB   ;
+    background-color: #F2EEEB;
 }
-#CabecalhoCadastro{
+
+#CabecalhoCadastro {
     display: flex;
     flex-direction: row;
     height: 30vh;
-  
+
 }
-#TituloCadastro{
-   
+
+#TituloCadastro {
+
     display: flex;
     align-items: center;
-    justify-content:right;
-  
-    width: 56%;
+    justify-content: right;
+
+    width:60%;
 }
-#SpanCadastro{
-    height: 55px;
-    width: 20%;
+
+#SpanCadastro {
+
+    width: 25%;
     border-radius: 10px;
+    font-size: 30px;
     text-align: center;
     background-color: #262626;
 
 }
-#SpanCadastro p{
-    font-size: 22px;
-    color: #F2DCD8;
+
+#SpanCadastro p {
     
+    color: #F2DCD8;
+
 
 }
 
 
-#Logo{
+#Logo {
     display: flex;
     align-items: center;
     justify-content: right;
@@ -42,47 +47,52 @@
     height: 134px;
     padding-right: 40px;
 }
-#Logo img{
+
+#Logo img {
     height: 134px;
 }
 
 
- /* Cadastro */
-#Cadastro{
+/* Cadastro */
+#Cadastro {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 60px;
-    
- height: 300px;
+
+    height: 300px;
 }
-#Cadastro p{
-    font-size: 12px;
+
+#Cadastro p {
+    font-size: 20px;
 
 }
-#Icone{
+
+#Icone {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
+
+
 }
-#InputsCadastro{
+
+#InputsCadastro {
     margin-top: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
- 
+    gap: 20px;
     text-align: center;
 }
-#InputsCadastro input{
+
+#InputsCadastro input {
     width: 460px;
-   cursor: pointer;
+    cursor: pointer;
     height: 68px;
     border-radius: 28px;
     background-color: #F2DCD8;
-    
+
 }
 
 #BtnLogar {
@@ -93,5 +103,4 @@
     color: #F2DCD8;
     font-size: 20px;
     font-family: "Inknut Antiqua", serif;
-
 }

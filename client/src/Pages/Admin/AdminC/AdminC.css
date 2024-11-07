@@ -1,0 +1,29 @@
+#C{
+    display: flex;
+    flex-direction: row;
+}
+#BodyC{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    font-size: 20px;
+}
+#Tcerimonialista{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:20vh;
+}
+#Ctabela{
+    display: flex;
+    justify-content: center;
+  
+    height: 80vh;
+}
+#cerimonialista{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}

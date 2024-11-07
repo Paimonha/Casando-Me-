@@ -7,7 +7,7 @@ function Login() {
         <>
             <div id="P">
                 <div id="Cabecalho">
-                    <div id="Titulo">
+                    <div id="TituloL">
 
                         <span id="Span">Login</span>
                     </div>
@@ -18,33 +18,33 @@ function Login() {
                     </div>
                 </div>
 
-                    <div id="Login">
-                        <div id="Icone">
-                            <img src={Icone} alt="" />
-
-                        </div>
-
-                        <div id="Inputs">
-
-                            <input type="text" placeholder="E-mail"/>
-                            <input type="password" placeholder="Password"/>
-
-                        </div>
-                        <p>Esqueci minha senha</p>
-                        
-                        <div id="BtnLogar">
-                            <button>Logar</button>
-
-                        </div>
-                        <p> <Link to="/cadastro"></Link> Cadastrar</p>
-
-
-                        
+                <div id="Login">
+                    <div id="Icone">
+                        <img src={Icone} alt="" />
 
                     </div>
 
+                    <div id="Inputs">
 
-                
+                        <input type="text" placeholder="E-mail" />
+                        <input type="password" placeholder="Password" />
+
+                    </div>
+                    <p>Esqueci minha <Link to="#"> senha</Link></p>
+
+                    <div id="BtnLogar">
+                        <button>Logar</button>
+
+                    </div>
+                    <Link to="/cadastro" id="LinkC"><p>Cadastrar</p></Link>
+
+
+
+
+                </div>
+
+
+
             </div>
 
 
