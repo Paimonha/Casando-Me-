@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import Header from '../../../Components/Header'
-import Logo from './Logo.svg'
+import Header from '../../../Components/Header/Header'
+import Logo from '../../Svg/Titulo.svg'
 import "./HomeLogin.css"
 
 function HomeLogin() {

@@ -8,6 +8,7 @@ import Login from './Pages/Login/Login'
 import Cadastro from './Pages/Cadastro/Cadastro'
 import Galeria from './Pages/Galeria/Galeria'
 import Formulario from './Pages/Formulario/Formulario'
+import Admin from './Pages/Admin/Admin';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/formulario",
     element: <Formulario />,
+  },
+  {
+    path: "/admin",
+    element: <Admin />,
   },
  
 

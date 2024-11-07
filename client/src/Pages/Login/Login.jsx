@@ -1,6 +1,7 @@
 import "./Login.css"
-import Logo from "./Logo.svg"
-import Icone from "./Icone.svg"
+import { Link } from "react-router-dom";
+import Logo from "../../Svg/Logo.svg"
+import Icone from "../../Svg/Icone.svg"
 function Login() {
     return (
         <>
@@ -35,6 +36,7 @@ function Login() {
                             <button>Logar</button>
 
                         </div>
+                        <p> <Link to="/cadastro"></Link> Cadastrar</p>
 
 
                         
