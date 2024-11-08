@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+.sobre-box {
+    border: 1px solid #000;
+    border-radius: 12px;
+    margin-top: 5rem;
+    margin-left: 10.8rem;
+    width: 19.688rem;
+    height: 38.875rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    text-align: center;
+}
+
+.sobre-nos-icons {
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sobre-nos-icons-span {
+
+}
+
+.sobre-nos-icons svg{
+    width: 1.5rem;
+    margin-left: 7rem;
+}
+
+.sobre-img {
+    text-align: center;
+}
+
+.gray-circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 10%;
+}
+
+.gray-circle img {
+    border-radius: 60%;
+    width: 180px;
+    height: 180px;
+    margin-left: 2rem;
+}
+
+.sobre-nos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 90px;
+    background-color: #F2EEEB;
+}
+
+.ian-lado {
+    padding-left: 20rem;
+    font-size: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sobre-text h1{
+    font-size: 25px;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sobre-text-label {
+    font-size: 17px;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+}
