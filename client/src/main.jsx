@@ -8,12 +8,13 @@ import Login from './Pages/Login/Login'
 import Cadastro from './Pages/Cadastro/Cadastro'
 import Galeria from './Pages/Galeria/Galeria'
 import Formulario from './Pages/Formulario/Formulario'
+import Fornecedor from './Pages/Fornecedores/Fornecedor'
+import Cerimonialista from './Pages/Cerimonialista/Cerimonialista'
+import Sobre from './Pages/Sobre/Sobre';
 import Admin from './Pages/Admin/Admin';
 import AdminU from './Pages/Admin/AdminU/AdminU'
 import AdminC from './Pages/Admin/AdminC/AdminC'
 import AdminF from './Pages/Admin/AdminF/AdminF'
-import Fornecedores from './Pages/Fornecedores/Fornecedor'
-import Cermimonialista from './Pages/Cerimonialista/Cerimonialista'
 
 
 const router = createBrowserRouter([
@@ -22,14 +23,25 @@ const router = createBrowserRouter([
     element: <HomeLogin />,
   },
   {
+    path: "/cerimonialista",
+    element: <Cerimonialista />
+  },
+  {
+    path: "/fornecedor",
+    element: <Fornecedor />
+  },
+  {
     path: "/home",
     element: <Home />,
+  },
+  {
+    path: "/sobre",
+    element: <Sobre />,
   },
   {
     path: "/login",
     element: <Login />,
   },
-  
   {
     path: "/cadastro",
     element: <Cadastro />,
@@ -41,10 +53,6 @@ const router = createBrowserRouter([
   {
     path: "/formulario",
     element: <Formulario />,
-  },
-  {
-    path: "/fornecedores",
-    element: <Fornecedores />,
   },
   {
     path: "/admin",
@@ -62,11 +70,6 @@ const router = createBrowserRouter([
     path: "/adminc",
     element: <AdminC />,
   },
-  {
-    path: "/ceri",
-    element: <Cermimonialista />,
-  },
-
  
 
 ]);

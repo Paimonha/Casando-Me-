@@ -11,16 +11,16 @@ function Header(){
                     <Link to='/'> 
                     <span className="Span"> <p>Home</p> </span>
                     </Link>
-                    <Link to='/cadastro'>
+                    <Link to='/fornecedor'>
                     <span className="Span"> <p>Fornecedores</p> </span>
                     </Link>
-                    <Link  to='/cadastro'>
+                    <Link  to='/cerimonialista'>
                     <span className="Span"> <p>Cerimônialista</p> </span>
                     </Link>
-                    <Link  to='/cadastro'>
+                    <Link  to='/galeria'>
                     <span className="Span"> <p>Galeria</p> </span>
                     </Link >
-                    <Link  to='/cadastro'>
+                    <Link  to='/sobre'>
                     <span className="Span"> <p>Sobre</p> </span>
                     </Link>
                 </div>

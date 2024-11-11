@@ -1,27 +1,21 @@
-import './Admin.css'
-import Logo from '../../../src/Svg/Logo.svg'
-import Sidebar from '../../../Components/SideBar/SideBar'
+import "./Admin.css";
+import Logo from "../../../src/Svg/Logo.svg";
+import Sidebar from "../../../Components/SideBar/SideBar";
 function Admin() {
-    return (
-        <>
-            <div id='Admin'>
-                <Sidebar />
+  return (
+    <>
+      <div id="Admin">
+        <Sidebar />
 
-                <div id='Corpo'>
-                     <span id='Titulo'>
-                     <img src={Logo} alt="" />
-                        <h1>Bem vindo </h1> 
-                        <h2> Tela de Admin</h2>
-                     </span>
-                </div>
-
-            </div>
-
-
-
-
-        </>
-    )
-
+        <div id="Corpo">
+          <span id="Titulo">
+            <img src={Logo} alt="" />
+            <h1>Bem vindo </h1>
+            <h2> Tela de Admin</h2>
+          </span>
+        </div>
+      </div>
+    </>
+  );
 }
-export default Admin
+export default Admin;

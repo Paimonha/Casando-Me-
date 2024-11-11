@@ -42,7 +42,7 @@ body {
     resize: vertical;
     margin: 1rem;
     border-radius: 15px; 
-    height: 67px;
+    height: 149px;
     width: 760px;  
     padding: 1rem;
     background-color: #F1DCD7;
@@ -97,5 +97,27 @@ body {
     .button {
         min-width: 120px;
         padding: 0 25px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .button {
+        min-width: 120px;
+        padding: 0 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Title {
+        font-size: 25px; /* Reduz o tamanho da fonte do título em telas pequenas */
+    }
+
+    .formsCerimonialista input, .formsCerimonialista textarea {
+        width: 100%; /* Usa toda a largura da tela em dispositivos menores */
+    }
+
+    .button {
+        font-size: 16px; /* Reduz o tamanho da fonte do botão em telas pequenas */
     }
 }

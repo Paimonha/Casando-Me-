@@ -1,4 +1,5 @@
-#Header{
+/* Estilos gerais */
+#Header {
     display: flex;
     flex-direction: row;
     background-color: #262626;
@@ -11,31 +12,27 @@ a {
     text-decoration: none;
 }
 
-#Texto{
+#Texto {
     width: 70%;
     display: flex;
     align-items: center;
     justify-content: start;
 }
 
-.Span p{
+.Span p {
     cursor: pointer;
     color: #F2DCD8;
     font-weight: 100;
-    margin: 0rem 4rem
+    margin: 0rem 4rem;
 }
 
-.Span :hover {
+.Span:hover p {
     transition: .2s;
     color: #ffffff;
     font-weight: 400;
- }
-
-#Login{
-  height: 10px;
 }
 
-#Svg{
+#Svg {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -44,8 +41,42 @@ a {
 }
 
 #log {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1315px) {
+    #Header {
+        flex-direction: column;
+        height: auto; /* Permite que a altura se ajuste ao conteúdo */
+        padding: 10px 0; /* Adiciona algum espaçamento */
+    }
+
+    #Texto {
+        width: 100%;
+        flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+        justify-content: center; /* Centraliza os links */
+        
+    }
+
+    .Span p {
+        margin: 0rem 2rem; /* Reduz a margem em telas menores */
+        font-size: 20px; /* Diminui o tamanho da fonte */
+    }
+
+    #Svg {
+        margin-right: 0; /* Remove a margem à direita */
+        justify-content: center; /* Centraliza o ícone de login */
+        margin-top: 10px; /* Adiciona um pouco de espaço acima do ícone */
+    }
+}
+
+@media (max-width: 480px) {
+    .Span p {
+        font-size: 18px; /* Diminui ainda mais o tamanho da fonte para telas muito pequenas */
+        margin: 0rem 1rem; /* Ajusta a margem */
+    }
 }
