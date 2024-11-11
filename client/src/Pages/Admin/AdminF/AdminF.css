@@ -1,0 +1,31 @@
+#U{
+    display: flex;
+    flex-direction: row;
+}
+#Body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    font-size: 20px;
+}
+#Tfornecedores{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:20vh;
+}
+#Ftabela{
+    display: flex;
+    justify-content: center;
+  
+    height: 80vh;
+}
+#fornecedores{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+

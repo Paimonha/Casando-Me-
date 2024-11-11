@@ -1,0 +1,51 @@
+#Header{
+    display: flex;
+    flex-direction: row;
+    background-color: #262626;
+    width: 100%;
+    height: 91px;
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#Texto{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.Span p{
+    cursor: pointer;
+    color: #F2DCD8;
+    font-weight: 100;
+    margin: 0rem 4rem
+}
+
+.Span :hover {
+    transition: .2s;
+    color: #ffffff;
+    font-weight: 400;
+ }
+
+#Login{
+  height: 10px;
+}
+
+#Svg{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 4rem;
+    width: 100%;
+}
+
+#log {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 30px;
+}
