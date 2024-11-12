@@ -64,7 +64,9 @@ function Cerimonialista(){
                 <img src="/public/images/images.jpg"/>
             </div>
             <div className="ian-lado">
-                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+                printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                </h1>
             </div>
             <div className="ian-button-contate" id="ian-button-contate">
                 Contate
