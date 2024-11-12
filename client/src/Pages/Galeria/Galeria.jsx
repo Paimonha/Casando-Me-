@@ -11,13 +11,14 @@ function Galeria() {
       {/* Cabeçalho */}
       <Header />
       {/* Conteúdo */}
-
-      <div className="bb2">
-        <section className="b1">
-          {GaleriaDados.map((Galeria) => (
-            <Galerias imagem={Galeria.imagem} />
-          ))}
-        </section>
+      <div className="sas">
+        <div className="bb2">
+          <section className="b1">
+            {GaleriaDados.map((Galeria) => (
+              <Galerias imagem={Galeria.imagem} />
+            ))}
+          </section>
+        </div>
       </div>
     </>
   );
