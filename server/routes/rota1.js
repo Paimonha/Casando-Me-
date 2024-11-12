@@ -61,4 +61,27 @@ router.post('/login', async (req, res) => {
   }
 });
 
+
+
+// Rota para logout
+router.post('/logout', async (req, res) => {
+  try {
+    // Não há necessidade de fazer algo no backend para invalidar o token,
+    // mas podemos registrar no servidor que o usuário fez logout.
+    // O cliente deve remover o token localmente.
+
+    // No caso de alguma sessão do lado servidor (caso use algo além de JWT), aqui poderia ser removido o token.
+
+    console.log('Usuário fez logout com sucesso');
+
+    return res.status(200).json({ message: 'Logout realizado com sucesso' });
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao realizar o logout' });
+  }
+});
+
+
+
 module.exports = router;
+
+
