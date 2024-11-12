@@ -17,12 +17,12 @@ function Login() {
         try {
             const response = await axios.post('http://localhost:5000/api/rota/login', {
                 email,
-                password: senha,  // No backend, a senha foi chamada de 'password', então está correto aqui
+                password: senha,
             });
 
             const { token, role, userEmail } = response.data;
 
-            // Armazenar o token no localStorage
+            // Faz o armazenamento do token no localStorage
             localStorage.setItem('token', token);
 
             // Verificar o papel do usuário ou o email para redirecionar corretamente
