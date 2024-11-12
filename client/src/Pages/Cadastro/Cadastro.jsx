@@ -53,10 +53,10 @@ function Cadastro() {
 
                     <div >
                         <form onSubmit={handleRegister} id="InputsCadastro">
-                            <input type="text" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)}/>
-                            <input type="password" placeholder="Senha" value={senha} onChange={(e) => setSenha(e.target.value)}/>
+                            <input type="email" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                            <input type="password" placeholder="Senha" value={senha} onChange={(e) => setSenha(e.target.value)} required/>
                             {error && <p>{error}</p>}
-                            <p>já possui uma conta? <Link to="/login">Login</Link></p>
+                            <p>Já possui uma conta? Faça seu <Link to="/login">Login</Link></p>
                             
                             <button type="submit" id="BtnLogar">Cadastrar</button>
 
