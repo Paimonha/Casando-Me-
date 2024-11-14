@@ -4,9 +4,11 @@
     flex-direction: row;
     background-color: #262626;
     width: 100%;
-    height: 91px;
+    height: 91px; /* Altura do header */
     font-size: 24px;
-    position: relative; /* Para o posicionamento do menu móvel */
+    position: fixed; /* Mude para fixed para que o header fique sempre no topo */
+    top: 0; /* Posiciona o header no topo da página */
+    z-index: 10; /* Garante que o header fique acima de outros elementos */
 }
 
 a {
