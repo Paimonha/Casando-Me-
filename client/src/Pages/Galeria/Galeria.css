@@ -18,10 +18,10 @@
 }
 
 .b1 {
+  margin-top: 91px; /* Adicione uma margem superior igual à altura do header */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding-top: 90px;
   padding-right: 50px;
   padding-left: 50px;
   justify-items: center;
@@ -53,6 +53,8 @@
 
 /* Responsividade para telas entre 600px e 1024px */
 @media (min-width: 600px) and (max-width: 1024px) {
+  
+
   .b1 {
     grid-template-columns: repeat(
       2,
@@ -64,21 +66,26 @@
     width: 100%; 
     height: 80vh;
   }
+
+  .sas {
+    position: fixed;
+    z-index: 1;
+  }
 }
 
 /* Responsividade para celulares menores que 600px */
 @media (max-width: 600px) {
   .b1 {
-    grid-template-columns: 1fr; 
-    padding: 20px;
+      grid-template-columns: 1fr; 
+      padding: 20px;
+      margin-top: 91px; /* Mantenha a margem superior */
   }
 
   .Card img {
-    width: 100%; 
-    height: auto;
+      width: 100%; 
+      height: auto;
   }
 }
-
 /* Responsividade para telas entre 1024px e 1430px */
 @media (min-width: 1024px) and (max-width: 1430px) {
   .b1 {
