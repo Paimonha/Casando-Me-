@@ -31,6 +31,19 @@
   text-align: center;
 }
 
+.gray-circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 10%;
+}
+
+.gray-circle img {
+  border-radius: 60%;
+  width: 180px;
+  height: 180px;
+  margin-left: 2rem;
+}
+
 .sobre-nos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -39,7 +52,13 @@
   background-color: #f2eeeb;
 }
 
-
+.ian-lado {
+  padding-left: 20rem;
+  font-size: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
 .sobre-text h1 {
   font-size: 25px;

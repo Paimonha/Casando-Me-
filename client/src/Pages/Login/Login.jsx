@@ -4,6 +4,7 @@ import Logo from "../../Svg/Logo.svg"
 import Icone from "../../Svg/Icone.svg"
 import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
+import axios from "axios";
 function Login() {
 
     const [email, setEmail] = useState('');
@@ -14,7 +15,7 @@ function Login() {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:5000/api/rota/register', {
+            const response = await axios.post('http://localhost:5000/api/rota/login', {
                 email,
                 password,
             });

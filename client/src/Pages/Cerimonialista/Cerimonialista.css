@@ -1,3 +1,4 @@
+
 .cerimonialista-box {
     border: 1px solid #000;
     border-radius: 60px;
@@ -6,6 +7,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+   
 }
 
 .gray-circle {
@@ -58,14 +60,18 @@
     width: 40rem;
     height: 4.125rem;
     padding-top: 1.5rem;
+    
     border-radius: 65px;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 24px;
     cursor: pointer;
     border: 4px solid #000;
-    position: relative; /* Alterado de absolute para relative */
-    margin: 2rem auto; /* Centraliza o botão */
+    padding-top: 0.5em;
+    position: absolute;
+    margin-left: 70rem;
+    top: 78rem;
+    
 }
 
 .ian-button-contate {
@@ -77,83 +83,11 @@
     padding-top: 0.5em;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    margin-left: auto; /* Alinha à direita */
-    margin-right: auto; /* Alinha à esquerda */
+    margin-left: 20rem;
     border-radius: 65px;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 24px;
     cursor: pointer;
     border: 4px solid #000;
-}
-
-/* Responsividade */
-@media (max-width: 1200px) {
-    .ian-bocas {
-        padding: 20px;
-        grid-template-columns: 1fr; /* Uma coluna em telas menores */
-    }
-
-    .ian-lado, .ian-cima {
-        padding-left: 1rem; /* Reduz o padding */
-        font-size: 14px; /* Ajusta o tamanho da fonte */
-    }
-
-    .ian-button {
-        width: 90%; /* Ajusta a largura do botão */
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .ian-button-contate {
-        width: 90%; /* Ajusta a largura do botão */
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    .gray-circle {
-        width: 80%; /* Ajusta o tamanho do círculo em telas menores */
-        height: auto; /* Deixa a altura automática */
-    }
-
-    .gray-circle img {
-        width: 100px; /* Ajusta a imagem */
-        height: 100px; /* Ajusta a imagem */
-    }
-
-    .ian-button {
-        font-size: 20px; /* Ajusta o tamanho da fonte */
-    }
-
-    .ian-button-contate {
-        font-size: 20px; /* Ajusta o tamanho da fonte */
-    }
-}
-
-@media (max-width: 480px) {
-    .ian-lado, .ian-cima {
-        padding-left: 0; /* Remove o padding em telas muito pequenas */
-        font-size: 15px; /* Ajusta o tamanho da fonte */
-    }
-
-    .ian-cima h1 {
-        text-align: center;
-    }
-
-    .ian-button, .ian-button-contate {
-        font-size: 18px; /* Ajusta o tamanho da fonte */
-        width: 100%; /* Botões ocup */
-    }
-
-    .gray-circle {
-        width: 100%; /* Ajusta o tamanho do círculo para ocupar 100% */
-        height: auto; /* Deixa a altura automática */
-    }
-
-    .gray-circle img {
-        width: 80px; /* Ajusta a imagem para telas pequenas */
-        height: 80px; /* Ajusta a imagem para telas pequenas */
-    }
 }
