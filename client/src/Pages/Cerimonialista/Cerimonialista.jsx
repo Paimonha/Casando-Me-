@@ -1,5 +1,6 @@
 import Header from '../../../Components/Header/Header'
 import "./Cerimonialista.css"
+import Card from '../../../Components/CardsCerimonialistas/Cards'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 function Cerimonialista(){
@@ -8,6 +9,8 @@ function Cerimonialista(){
         <div>
         <Header />
         </div>
+
+        <Card/>
 
         <div className="ian-bocas">
         <div className="cerimonialista-box">

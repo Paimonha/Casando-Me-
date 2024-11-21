@@ -22,7 +22,7 @@ body {
 }
 
 .formsCerimonialista {
-    margin-top: 5rem;
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;    
 }
@@ -50,6 +50,7 @@ body {
     max-height: 29rem;
     min-height: 67px;
     border: solid 1px black;
+
 }
 
 .displayButton{
@@ -121,3 +122,4 @@ body {
         font-size: 16px; /* Reduz o tamanho da fonte do botão em telas pequenas */
     }
 }
+
