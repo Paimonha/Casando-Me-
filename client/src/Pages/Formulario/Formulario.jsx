@@ -14,7 +14,7 @@ const Formulario = ({emCerimonialistaAdicionado}) => {
     const handleAdicionarCerimonialista = async (e) =>{
         e.preventDefault();
         try {
-            await api.post('/cerimonialista', {nome, telefone, email, whatsapp, instagram, descricao});
+            await api.post('/http://localhost:5000/api/rota/registerC', {nome, telefone, email, whatsapp, instagram, descricao});
             setNome('');
             setTelefone('');
             setEmail('');
@@ -22,6 +22,7 @@ const Formulario = ({emCerimonialistaAdicionado}) => {
             setInstagram('');
             setDescricao('');
             emCerimonialistaAdicionado();
+            
         }catch (error){
             console.error('Error ao cadastrar: ',error)
         }
