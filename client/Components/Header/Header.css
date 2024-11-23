@@ -27,19 +27,22 @@ a {
     margin: 0rem 4rem;
 }
 
-.Span:hover p {
+.Span:hover a {
     transition: .2s;
     color: #ffffff;
     font-weight: 400;
+    border-bottom: #ffffff;
 }
 
 #Svg {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
     margin-right: 4rem;
     width: 100%;
 }
+
 
 #log {
     display: flex;

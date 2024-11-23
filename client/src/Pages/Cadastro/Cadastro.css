@@ -1,3 +1,7 @@
+a {
+    text-decoration: none;
+}
+
 #PCadastro {
     display: flex;
     flex-direction: column;
@@ -60,6 +64,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 60px;
+    
 
     height: 300px;
 }
@@ -84,6 +89,7 @@
     align-items: center;
     gap: 20px;
     text-align: center;
+    
 }
 
 #InputsCadastro input {
@@ -92,6 +98,7 @@
     height: 68px;
     border-radius: 28px;
     background-color: #F2DCD8;
+    padding: 20px;
 
 }
 
@@ -100,7 +107,16 @@
     width: 175px;
     border-radius: 30px;
     background-color: #262626;
+    box-shadow: 10px 10px 8px #444;
     color: #F2DCD8;
     font-size: 20px;
     font-family: "Inknut Antiqua", serif;
 }
+#InputsCadastro button:hover {
+    transition: all 0.3s ease;
+    background-color: #f2dcd8;
+    color: #262626;
+    box-shadow: 10px 10px 8px #444;
+    transform: scale(1.05);
+  }
+  

@@ -11,7 +11,7 @@ function Sidebar() {
             <div id="Side">
                 <div id="MetadeIcon" >
                     <img src={Logo} alt="" />
-                    <div className="DivBox"> <Link to="/adminf"> <FontAwesomeIcon className="Box" icon={faBox} /> </Link></div>
+          
                     <div className="DivBox"> <Link to="/adminc"> <FontAwesomeIcon className="Box" icon={faChurch} /> </Link></div>
                     <div className="DivBox"> <Link to="/adminu"> <FontAwesomeIcon className="Box" icon={faUser} /> </Link></div>
                 </div>

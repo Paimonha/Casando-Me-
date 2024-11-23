@@ -1,86 +1,56 @@
-import React, { useState } from 'react';
 import Header from '../../../Components/Header/Header'
-import api from '../../service/cerimonialistas';
 import "./Formulario.css"
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser'; 
 
-const Formulario = ({emCerimonialistaAdicionado}) => {
-    const [nome, setNome] = useState('')
-    const [telefone, setTelefone] = useState('')
-    const [email, setEmail] = useState('')
-    const [whatsapp, setWhatsapp] = useState('')
-    const [instagram, setInstagram] = useState('')
-    const [descricao, setDescricao] = useState('')
+function Formulario() {
+    const form = useRef();
 
-    const handleAdicionarCerimonialista = async (e) =>{
-        e.preventDefault();
-        try {
-            await api.post('/http://localhost:5000/api/rota/registerC', {nome, telefone, email, whatsapp, instagram, descricao});
-            setNome('');
-            setTelefone('');
-            setEmail('');
-            setWhatsapp('');
-            setInstagram('');
-            setDescricao('');
-            emCerimonialistaAdicionado();
-            
-        }catch (error){
-            console.error('Error ao cadastrar: ',error)
-        }
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs
+        .sendForm('service_y5zzma7', 'template_u27dayb', form.current, {
+          publicKey: '9mjIXJags-hzgSUR3',
+        })
+        .then(
+          () => {
+            console.log('SUCCESS!');
+            alert("Enviado")
+          },
+          (error) => {
+            console.log('FAILED...', error.text);
+            alert("Error")
+          },
+        );
     };
-
-    return(
+    return ( 
         <>
-            <Header/>
+            <Header />
             <div className='flexDisplayConteiner'>
                 <div>
                     <div className='Title'>Formulário de Envio</div>
                 </div>
-                <form onSubmit={handleAdicionarCerimonialista} className='formsCerimonialista'>
-                    <input
-                        type="text"
-                        placeholder="Nome: "
-                        value={nome}
-                        onChange={(e) => setNome(e.target.value)}
-                        required
-                    />
-                    <input
-                        type="text"
-                        placeholder="Telefone: "
-                        value={telefone}
-                        onChange={(e) => setTelefone(e.target.value)}
-                        required
-                    />
-                    <input
-                        type="text"
-                        placeholder="Email: "
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
-                    <input
-                        type="text"
-                        placeholder="Whatsapp: "
-                        value={whatsapp}
-                        onChange={(e) => setWhatsapp(e.target.value)}
-                        required
-                    />
-                    <input
-                        type="text"
-                        placeholder="Instagram (opcional): "
-                        value={instagram}
-                        onChange={(e) => setInstagram(e.target.value)}
-                        
-                    />
-                     <input
-                        type="textArea"
-                        placeholder="Descricao: "
-                        value={descricao}
-                        onChange={(e) => setDescricao(e.target.value)}                    
-                    />
+              {/*   <form ref={form} onSubmit={sendEmail}>
+                    <label>Name</label>
+                    <input type="text" name="user_name" />
+                    <label>Email</label>
+                    <input type="email" name="user_email" />
+                    <label>Descrição</label>
+                    <textarea name="message" />
+                    <input type="submit" value="Send" />
+                </form> */}
+
+
+                   <form ref={form} onSubmit={sendEmail} className='formsCerimonialista'>
+                    <input type='text' name="to_name" placeholder='Nome:' className='nomeCerimonialista' ></input>
+                    <input type='text' name="from_telefone" placeholder='Telefone:' className='telefoneCerimonialista' ></input>
+                    <input type='email'name="from_email" placeholder='E-mail:'className='EmailCerimonialista'></input>
+                    <textarea name="descricao" placeholder='Descrição:'className='descricaoCerimonialista'></textarea>
                     <div className='displayButton'>
-                        <button type="submit" className='button'>Cadastrar</button>
+                        <button type="submit" value="Send" className="button">Enviar</button>
                     </div>
-                </form>
+                </form> 
             </div>
         </>
     )

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
 
 function Header() {
@@ -33,7 +33,8 @@ function Header() {
 
             <div id="Svg">
                 <Link to="/cadastro">
-                    <FontAwesomeIcon id="log" icon={faRightFromBracket} style={{ color: "#f2dcd8" }} />
+                    <FontAwesomeIcon id="log" icon={faUser} style={{ color: "#f2dcd8" }} />
+               
                 </Link>
             </div>
 

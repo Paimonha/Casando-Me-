@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-import axios from 'axios'; 
+const EditUser = ({ user, onUserUpdated }) => {
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
 
-const EditUser = ({ usuario, onUserUpdated }) => {
-    const [email, setEmail] = useState('');
-    const [senha, setSenha] = useState('');
- 
   useEffect(() => {
-    setEmail(usuario.email)
-    setSenha(usuario.senha)
-  }, [usuario]);
+    setEmail(user.email);
+    setSenha(user.senha);
 
-  const handleUpdateProduct = async (e) => {
+  }, [user]);
+
+  const handleUpdateUser = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`/usuario/${usuario.id}`, { email, senha });
+      await axios.put(`http://localhost:5000/api/rota/register/${user.id}`, { email, senha });
       onUserUpdated();
     } catch (error) {
       console.error('Erro ao atualizar o produto:', error);
@@ -22,9 +22,10 @@ const EditUser = ({ usuario, onUserUpdated }) => {
   };
 
   return (
-    <div>
-      <h2>Editar produto</h2>
-      <form onSubmit={handleUpdateProduct}>
+    <div id='EditUsuario'>
+      <h2>Editar Usuário</h2>
+      <div id="DivForms">
+      <form onSubmit={handleUpdateUser} id='Forms'>
       <input
           type="text"
           placeholder="Email"
@@ -32,17 +33,16 @@ const EditUser = ({ usuario, onUserUpdated }) => {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-      
-      <input
+        <input
           type="password"
           placeholder="Senha"
           value={senha}
           onChange={(e) => setSenha(e.target.value)}
           required
         />
-      
         <button type="submit">Atualizar</button>
       </form>
+      </div>
     </div>
   );
 };

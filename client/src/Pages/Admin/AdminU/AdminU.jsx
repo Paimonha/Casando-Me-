@@ -1,34 +1,32 @@
 import './AdminU.css'
 import React, { useState, useEffect } from 'react';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Sidebar from '../../../../Components/SideBar/SideBar';
+import EditUser from './EditarUsuario';
+import ListUser from './ListarUsuario';
 import axios from 'axios';
 
 
 const AdminU = () => {
-    const navigate = useNavigate();
-    const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState('');
+    const [editingUser, setEditingUser] = useState(null);
 
-    const handleLogout = () => {
-        localStorage.removeItem('authToken'); 
-        navigate('/login'); 
+    const handleEdit = (user) => {
+      setEditingUser(user);
     };
-    const fetchData = async () => {
-        setLoading(true);
-        setError('');
+  
+    const handleDelete = async (id) => {
+      try {
+        await axios.delete(`http://localhost:5000/api/rota/register/${id}`);
+        window.location.reload();
+      } catch (error) {
+        console.error('Erro ao deletar produto:', error);
+      }
+    };
+  
 
-        try {
-            const response = await axios.get('http://localhost:5000/api/rota/users');
-            console.log('Dados recebidos:', response.data);
-            setData(response.data);
-        } catch (error) {
-            console.error('Erro ao buscar dados:', error);
-            setError('Erro ao buscar dados.');
-        } finally {
-            setLoading(false);
-        }
+    const handleUserUpdated = () => {
+      setEditingUser(null);
+      window.location.reload();
     };
 
     return (
@@ -36,23 +34,17 @@ const AdminU = () => {
             <div id="U">
                 <Sidebar />
                 <div id='BodyU'>
-                    <div className="dashboard-header">
-                        <h1>Usuários que foram Cadastrados</h1>
-                        <button onClick={handleLogout} className="logout-button">Sair</button>
+                    <div id="CabecalhoU">
+                    <h1>Lista de Usuario</h1>
+                      
                     </div>
-                    <button onClick={fetchData}>Buscar Cadastrados</button>
-                    {loading && <p>Carregando...</p>}
-                    {error && <p className="error">{error}</p>}
-                    {data.length > 0 && (
-                        <ul>
-                            {data.map((user, index) => (
-                                <li key={index}>{user.email}</li>
-                                
-                            ))}
-                        </ul>
+                   
+                    {editingUser ? (
+                        <EditUser user={editingUser} onUserUpdated={handleUserUpdated} />
+                    ) : (
+                        <ListUser onEdit={handleEdit} onDelete={handleDelete} />
                     )}
-                    {data.length === 0 && !loading && <p>Nenhum usuário cadastrado.</p>}
-
+                    
                 </div>
 
 

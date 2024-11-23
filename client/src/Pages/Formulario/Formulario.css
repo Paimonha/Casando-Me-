@@ -22,7 +22,7 @@ body {
 }
 
 .formsCerimonialista {
-    margin-top: 3rem;
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;    
 }
@@ -38,6 +38,7 @@ body {
     border: solid 1px black
 }
 
+
 .formsCerimonialista textarea {
     resize: vertical;
     margin: 1rem;
@@ -50,7 +51,6 @@ body {
     max-height: 29rem;
     min-height: 67px;
     border: solid 1px black;
-
 }
 
 .displayButton{
@@ -63,7 +63,7 @@ body {
 .button {
     background-color: #fff;
     border: 2px solid #403C3D;
-    box-shadow: #403C3D 4px 4px 0 0;
+    box-shadow: 8px 8px 6px #262626;
     color: #403C3D;
     font-family: "Inknut Antiqua", serif;
     cursor: pointer;
@@ -83,16 +83,17 @@ body {
     width: 175px;  
     font-size: 18px;
     min-height: 67px;
+    
 }
 
 .button:hover {
-    background-color: #ffffffab;
+    
+    background-color: #262626;
+    box-shadow: 10px 10px 8px #444;
+    color: #F2DCD8;
+
 }
 
-.button:active {
-    box-shadow: #403C3D 2px 2px 0 0;
-    transform: translate(2px, 2px);
-}
 
 @media (min-width: 768px) {
     .button {
@@ -122,4 +123,3 @@ body {
         font-size: 16px; /* Reduz o tamanho da fonte do botão em telas pequenas */
     }
 }
-

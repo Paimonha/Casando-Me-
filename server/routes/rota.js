@@ -2,8 +2,8 @@ const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');  // Importando o JWT
 const User = require('../model/usuario');
-const Cerimonialista = require('../model/cerimonialista');
 const router = express.Router();
+
 
 // Rota para registrar um novo usuário
 router.post('/register', async (req, res) => {
@@ -24,19 +24,35 @@ router.post('/register', async (req, res) => {
       email,
       senha: hashedPassword
     });
-
+    
     res.status(201).json({ message: 'Usuário cadastrado com sucesso!' });
   } catch (error) {
     res.status(500).json({ error: 'Erro ao cadastrar usuário' });
   }
 });
+router.get('/register', async (req, res) => {
+  const usuario = await User.findAll();
+  res.json(usuario);
+});
+router.put('/register/:id', async (req, res) => {
+  const { id } = req.params;
+  const { email, senha } = req.body;
+  await User.update({email, senha }, { where: { id } });
+  res.json({ message: 'Produto alterado com sucesso' });
+});
+router.delete('/register/:id', async (req, res) => {
+  const { id } = req.params;
+  await User.destroy({ where: { id } });
+  res.json({ message: 'Produto deletado!' });
+});
+
 
 // Rota para login
 router.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    // Verificar se o usuário existe
+ 
     const user = await User.findOne({ where: { email } });
     if (!user) {
       return res.status(404).json({ error: 'Usuário não encontrado' });
@@ -70,7 +86,7 @@ router.get('/users', async (req, res) =>{
     res.status(500).json({ error: 'Erro ao buscar usuario' });
   }
 
-});
+})
 
 
 
@@ -92,40 +108,6 @@ router.post('/logout', async (req, res) => {
 });
 
 
-
-//Registro Cerimonialista 
-
-router.post('/registerC', async (req, res) => {
-  try {
-    const { nome, telefone, email, whatsapp, instagram, descricao } = req.body;
-
-    // Verificar se o email já está em uso
-    const existingCerimonialista = await Cerimonialista.findOne({ where: { email } });
-    if (existingCerimonialista) {
-      return res.status(400).json({ error: 'E-mail já cadastrado' });
-    }
-
-    // Criar o novo usuário
-    const cerimonialista = await Cerimonialista.create({
-      nome, telefone, email, whatsapp, instagram, descricao
-    });
-
-    res.status(201).json({ message: 'Cerimonialista cadastrado com sucesso!' });
-  } catch (error) {
-    res.status(500).json({ error: 'Erro ao cadastrar cerimonialista' });
-  }
-});
-
-router.get('/cerimonialistas', async (req, res) =>{
-  try{
-    const cerimonialistas = await Cerimonialistas.findAll();
-    res.json(cerimonialistas);
-  
-    } catch (error) {
-    res.status(500).json({ error: 'Erro ao buscar cerimonialista' });
-  }
-
-})
 
 module.exports = router;
 
