@@ -118,6 +118,13 @@
     border: 4px solid #000;
 }
 
+.ian-button-contate:hover, .ian-button:hover {
+    background-color: #706E6f;
+    cursor: pointer;
+    transition: ease .2s;
+    
+}
+
 /* Responsividade */
 @media (max-width: 1200px) {
     .ian-bocas {
