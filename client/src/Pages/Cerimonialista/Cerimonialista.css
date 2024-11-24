@@ -3,14 +3,17 @@
     border-radius: 60px;
     margin-top: 5rem;
     margin-left: 1rem;
-    width: 100%;
+    margin-right: 1rem; 
+    width: calc(100% - 2rem); 
     display: flex;
     flex-direction: column;
+    padding: 20px; 
+    box-sizing: border-box;
 }
 
 .cerimonialista-h1 {
-    margin: 0; /* Remover todas as margens */
-    padding: 0; /* Remover todos os paddings */
+    margin: 0; 
+    padding: 0; 
     text-align: center;
 }
 
@@ -42,6 +45,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .ian-lado h1 {
@@ -57,6 +61,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    text-align: center;
 }
 
 .ian-cima h1 {
@@ -111,4 +116,63 @@
     font-size: 24px;
     cursor: pointer;
     border: 4px solid #000;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .ian-bocas {
+        grid-template-columns: repeat(1, 1fr); 
+        padding: 50px; 
+    }
+
+    .ian-button {
+        width: 90%; 
+        margin-left: 0;
+        margin-right: 0;
+        top: auto; 
+    }
+
+    .ian-button-contate {
+        width: 90%; 
+        margin-left: 0;
+        margin-right: 0; 
+    }
+}
+
+@media (max-width: 768px) {
+    .cerimonialista-box {
+        margin: 1rem;
+        padding: 10px; 
+    }
+
+    .gray-circle {
+        width: 80%;
+        height: auto;
+        text-align: center;
+    }
+
+    .gray-circle img {
+        max-height: 180px;
+    }
+
+    .ian-lado, .ian-cima {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 5px; 
+    }
+
+    .ian-cima {
+        padding-left: 0; 
+    }
+}
+
+@media (max-width: 480px) {
+    .ian-button, .ian-button-contate {
+        font-size: 18px;
+        height: auto;
+    }
+
+    .ian-cima h1, .ian-lado h1 {
+        font-size: 12px; 
+    }
 }
