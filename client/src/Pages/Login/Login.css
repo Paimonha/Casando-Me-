@@ -12,7 +12,6 @@
 }
 
 #TituloL {
-
     display: flex;
     align-items: center;
     justify-content: right;
@@ -79,12 +78,10 @@
 
 #Inputs input {
     width: 460px;
- 
     height: 68px;
     border-radius: 28px;
     padding: 20px;
     background-color: #F2DCD8;
-
 }
 
 #BtnLogar button {
@@ -95,12 +92,79 @@
     color: #F2DCD8;
     font-size: 20px;
     font-family: "Inknut Antiqua", serif;
-
 }
-#BtnLogar button:hover{
+
+#BtnLogar button:hover {
     transition: all 0.3s ease;
     background-color: #f2dcd8;
     color: #262626;
     box-shadow: 10px 10px 8px #444;
     transform: scale(1.05);
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1200px) {
+    #TituloL span {
+        font-size: 24px; /* Diminui o tamanho da fonte */
+        width: 30%; /* Ajusta a largura */
+    }
+
+    #Inputs input {
+        width: 80%; /* Ajusta a largura dos inputs */
+    }
+
+    #BtnLogar button {
+        width: 150px; /* Ajusta a largura do botão */
+        font-size: 18px; /* Diminui o tamanho da fonte do botão */
+    }
+}
+
+@media (max-width: 768px) {
+    #Cabecalho {
+        flex-direction: column; /* Muda para coluna em telas menores */
+        height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    }
+
+    #TituloL {
+        width: 100%; /* Ajusta a largura */
+        justify-content: center; /* Centraliza o conteúdo */
+    }
+
+    #Logo {
+        width: 100%; /* Ajusta a largura */
+        height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    }
+
+    #Inputs input {
+        width: 90%; /* Ajusta a largura dos inputs */
+        height: 50px; /* Ajusta a altura dos inputs */
+    }
+
+    #BtnLogar button {
+        width: 80%; /* Botão ocupa 80% da largura do contêiner */
+        height: 50px; /* Ajusta a altura do botão */
+        font-size: 16px; /* Diminui o tamanho da fonte do botão */
+    }
+}
+
+@media (max-width: 480px) {
+    #TituloL span {
+        font-size: 18px; /* Diminui o tamanho da fonte */
+        width: 40%; /* Ajusta a largura */
+    }
+
+    #Inputs input {
+        width: 95%; /* Ajusta a largura dos inputs */
+        height: 45px; /* Ajusta a altura dos inputs */
+    }
+
+    #BtnLogar button {
+        width: 90%; /* Botão ocupa 90% da largura do contêiner */
+        height: 45px; /* Ajusta a altura do botão */
+        font-size: 16px; /* Mantém o tamanho da fonte do botão */
+    }
+
+    #Login p {
+        font-size: 16px; /* Diminui o tamanho da fonte do parágrafo */
+    }
 }
