@@ -38,6 +38,7 @@ npm install
 ```bash
 cd server
 npm install
+node sync.js
 node index.js
 ```
 
