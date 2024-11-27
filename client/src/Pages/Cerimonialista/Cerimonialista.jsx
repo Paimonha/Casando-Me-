@@ -50,7 +50,7 @@ function Cerimonialista() {
                 <Link to={cerimonialista.whatsapp} className="Icons">
                   <FontAwesomeIcon icon={faWhatsapp} />
                 </Link>
-                <Link to={cerimonialista.email} className="Icons">
+                <Link to="/formulario" className="Icons">
                   <FontAwesomeIcon icon={faEnvelope} />
                 </Link>
               </div>
