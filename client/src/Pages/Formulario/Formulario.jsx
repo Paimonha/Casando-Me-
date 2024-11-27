@@ -2,6 +2,7 @@ import Header from "../../../Components/Header/Header";
 import "./Formulario.css";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { Link } from "react-router-dom";
 
 function Formulario() {
   const form = useRef();
@@ -56,12 +57,12 @@ function Formulario() {
           ></input>
           <input
             type="email"
-            name="from_email"
+            name="from_name"
             placeholder="E-mail:"
             className="EmailCerimonialista"
           ></input>
           <textarea
-            name="descricao"
+            name="message"
             placeholder="Descrição:"
             className="descricaoCerimonialista"
           ></textarea>
@@ -69,8 +70,12 @@ function Formulario() {
             <button type="submit" value="Send" className="button">
               Enviar
             </button>
+           
           </div>
         </form>
+        <Link to="/cerimonialista">
+                <p id="LinkC">Voltar</p>
+              </Link>
       </div>
     </>
   );
