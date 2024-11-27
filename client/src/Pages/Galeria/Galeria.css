@@ -40,6 +40,7 @@
 
 /* Filtro e efeito hover para as imagens */
 .Filtro {
+  object-fit: cover;
   width: 100%;
   filter: saturate(0%);
   overflow: hidden;

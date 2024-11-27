@@ -2,6 +2,8 @@ const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');  // Importando o JWT
 const User = require('../model/usuario');
+const Cerimonialista = require('../model/cerimonialista');
+/*const { default: Cadastroc } = require('../../client/src/Pages/Cadastro_C/cadastroC');*/
 const router = express.Router();
 
 
@@ -10,16 +12,14 @@ router.post('/register', async (req, res) => {
   try {
     const { email, senha } = req.body;
 
-    // Verificar se o email já está em uso
+
     const existingUser = await User.findOne({ where: { email } });
     if (existingUser) {
       return res.status(400).json({ error: 'E-mail já cadastrado' });
     }
 
-    // Criptografar a senha
     const hashedPassword = await bcrypt.hash(senha, 10);
 
-    // Criar o novo usuário
     const user = await User.create({
       email,
       senha: hashedPassword
@@ -38,16 +38,15 @@ router.put('/register/:id', async (req, res) => {
   const { id } = req.params;
   const { email, senha } = req.body;
   await User.update({email, senha }, { where: { id } });
-  res.json({ message: 'Produto alterado com sucesso' });
+  res.json({ message: 'Usuário alterado com sucesso' });
 });
 router.delete('/register/:id', async (req, res) => {
   const { id } = req.params;
   await User.destroy({ where: { id } });
-  res.json({ message: 'Produto deletado!' });
+  res.json({ message: 'Usuário deletado!' });
 });
 
 
-// Rota para login
 router.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -57,21 +56,20 @@ router.post('/login', async (req, res) => {
     if (!user) {
       return res.status(404).json({ error: 'Usuário não encontrado' });
     }
+    
 
-    // Verificar se a senha está correta
     const isPasswordValid = await bcrypt.compare(password, user.senha);
     if (!isPasswordValid) {
       return res.status(401).json({ error: 'Senha inválida' });
     }
 
-    // Gerar um token JWT
     const token = jwt.sign(
-      { id: user.id, role: user.role },  // Payload
-      'secreta',  // Chave secreta
-      { expiresIn: '1h' }  // Expiração do token (1 hora)
+      { id: user.id, role: user.role },  
+      'secreta', 
+      { expiresIn: '1h' }  
     );
 
-    // Retornar o token e o papel do usuário
+
     res.json({ token, role: user.role });
   } catch (error) {
     res.status(500).json({ error: 'Erro ao fazer login' });
@@ -88,16 +86,8 @@ router.get('/users', async (req, res) =>{
 
 })
 
-
-
-// Rota para logout
 router.post('/logout', async (req, res) => {
   try {
-    // Não há necessidade de fazer algo no backend para invalidar o token,
-    // mas podemos registrar no servidor que o usuário fez logout.
-    // O cliente deve remover o token localmente.
-
-    // No caso de alguma sessão do lado servidor (caso use algo além de JWT), aqui poderia ser removido o token.
 
     console.log('Usuário fez logout com sucesso');
 
@@ -105,6 +95,47 @@ router.post('/logout', async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: 'Erro ao realizar o logout' });
   }
+});
+
+
+
+//Rota Cerimonialista
+
+router.post('/registroCeri', async (req, res) => {
+  try {
+    const { nome, email, telefone, whatsapp, instagram, descricao } = req.body;
+
+ 
+    const existingCeri = await Cerimonialista.findOne({ where: { email } });
+    if (existingCeri) {
+      return res.status(400).json({ error: 'E-mail já cadastrado' });
+    }
+
+ 
+    const ceri = await Cerimonialista.create({
+      nome, email, telefone, whatsapp, instagram, descricao 
+    });
+    
+    res.status(201).json({ message: 'Usuário cadastrado com sucesso!' });
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao cadastrar usuário' });
+  }
+});
+
+router.get('/registroCeri', async (req, res) => {
+  const cerimonialista = await Cerimonialista.findAll();
+  res.json(cerimonialista);
+});
+router.put('/registroCeri/:id', async (req, res) => {
+  const { id } = req.params;
+  const {  nome, email, telefone, whatsapp, instagram, descricao  } = req.body;
+  await Cerimonialista.update({ nome, email, telefone, whatsapp, instagram, descricao  }, { where: { id } });
+  res.json({ message: 'Usuário alterado com sucesso' });
+});
+router.delete('/registroCeri/:id', async (req, res) => {
+  const { id } = req.params;
+  await Cerimonialista.destroy({ where: { id } });
+  res.json({ message: 'Usuário deletado!' });
 });
 
 

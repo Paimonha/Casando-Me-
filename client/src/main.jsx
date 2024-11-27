@@ -12,9 +12,9 @@ import Fornecedor from './Pages/Fornecedores/Fornecedor'
 import Cerimonialista from './Pages/Cerimonialista/Cerimonialista'
 import Sobre from './Pages/Sobre/Sobre';
 import Admin from './Pages/Admin/Admin';
-import AdminU from './Pages/Admin/AdminU/AdminU'
-import AdminC from './Pages/Admin/AdminC/AdminC'
-import AdminF from './Pages/Admin/AdminF/AdminF'
+import AdminU from './Pages/Admin/AdminU/AdminU';
+import AdminC from './Pages/Admin/AdminC/AdminC';
+import Cadastroc from './Pages/Cadastro_C/CadastroC';
 
 
 const router = createBrowserRouter([
@@ -63,13 +63,13 @@ const router = createBrowserRouter([
     element: <AdminU />,
   },
   {
-    path: "/adminf",
-    element: <AdminF/>,
-  },
-  {
     path: "/adminc",
     element: <AdminC />,
   },
+  {
+    path: "/cadastroc",
+    element: <Cadastroc />
+  }
  
 
 ]);

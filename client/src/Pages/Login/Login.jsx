@@ -68,13 +68,13 @@ function Login() {
 
                         
                     </div>
-                    <p>Esqueci minha <Link to="#"> senha</Link></p>
-
+                  {/*   <p>Esqueci minha <Link to="#"> senha</Link></p> */}
+                      <br />
                     <div id="BtnLogar">
                         <button>Logar</button>
-
+               
                     </div>
-                    <Link to="/cadastro" id="LinkC"><p>Cadastrar</p></Link>
+                    <Link to="/cadastro"><p  id="LinkC">Já tem Cadastro?</p></Link>
 
 
 

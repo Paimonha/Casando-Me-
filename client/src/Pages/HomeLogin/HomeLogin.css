@@ -4,9 +4,7 @@
   height: 100vh;
   background-color: #f2eeeb;
   color: #262626;
-  position: relative; /* Contexto para z-index */
 }
-
 #logo {
   display: flex;
   justify-content: center;
@@ -14,23 +12,17 @@
   width: 100%;
   height: 500px;
   margin-bottom: 30px;
-  position: relative; /* Permite o uso de z-index */
-  z-index: 1; /* Coloca a logo abaixo do header */
 }
 
 #logo img {
-  width: 40vh;
-  height: 45vh;
-  background: url(image.png);
-  border-radius: 22px;
-  /* Remover position: absolute para evitar sobreposição */
-}
+ /* image 5 */
 
-header {
-  position: relative; /* Para permitir z-index */
-  z-index: 2; /* Coloca o header acima da logo */
-  background-color: white; /* Adiciona um fundo ao header */
-  padding: 20px; /* Adiciona padding ao header */
+ position: absolute;
+ width: 40vh;
+ height: 45vh;
+ background: url(image.png);
+ border-radius: 22px;
+
 }
 
 #texto {
@@ -59,17 +51,16 @@ header {
   background-color: #262626;
   color: #e3b8b3;
   border-radius: 65px;
-  width: 337px; /* Pode ser ajustado para 100% se você quiser que ocupe toda a largura */
-  height: 79px; /* Ajuste conforme necessário */
+  width: 337px;
+  height: 79px;
   font-size: 24px;
   font-family: "Inknut Antiqua", serif;
   font-weight: 700;
+  font-style: normal;
   border: 1px solid #262626;
   box-shadow: 8px 8px 6px #262626;
   cursor: pointer;
   transition: all 0.3s ease;
-  padding: 10px 20px;
-  box-sizing: border-box; 
 }
 
 #botao button:hover {
@@ -79,71 +70,8 @@ header {
   transform: scale(1.05);
 }
 
+
 .Titulo {
   display: flex;
   justify-content: center;
-}
-
-/* Media Queries para Responsividade */
-@media (max-width: 1200px) {
-  #logo img {
-    width: 30vh; /* Ajusta a largura da imagem em telas menores */
-    height: 35vh; /* Ajusta a altura da imagem em telas menores */
-  }
-
-  #texto span {
-    width: 80%; /* Aumenta a largura do texto em telas menores */
-    font-size: 16px; /* Diminui o tamanho da fonte em telas menores */
-  }
-
-  #botao button {
-    width: 80%; /* Botão ocupa 80% da largura do contêiner */
-    font-size: 22px; /* Diminui o tamanho da fonte do botão */
-  }
-}
-
-@media (max-width: 768px) {
-  #logo {
-    height: 400px; /* Ajusta a altura do logo */
-    margin-bottom: 20px; /* Diminui a margem inferior */
-  }
-
-  #botao {
-    height: 25vh; /* Ajusta a altura do botão */
-  }
-
-  #botao button {
-    font-size: 18px; /* Reduz o tamanho da fonte em telas menores */
-    padding: 8px 16px; /* Ajuste o padding */
-  }
-
-  .Titulo img {
-    width: 90%; /* Aumenta a largura da imagem para 90% em telas menores */
-    max-width: 300px; /* Limita a largura máxima da imagem em telas menores */
-  }
-}
-
-@media (max-width: 480px) {
-  #logo {
-    height: 300px; /* Ajusta a altura do logo */
-  }
-
-  #texto span {
-    width: 90%; /* Aumenta a largura do texto em telas muito pequenas */
-    font-size: 14px; /* Diminui ainda mais o tamanho da fonte */
-  }
-
-  #botao {
-    height: 20vh; /* Ajusta a altura do botão */
-  }
-
-  #botao button {
-    font-size: 16px; /* Reduz ainda mais o tamanho da fonte em telas muito pequenas */
-    padding: 6px 12px; /* Ajuste o padding */
-  }
-
-  .Titulo img {
-    width: 95%; /* Aumenta a largura da imagem para 95% em telas muito pequenas */
-    max-width: 250px; /* Limita a largura máxima da imagem em telas muito pequenas */
-  }
 }

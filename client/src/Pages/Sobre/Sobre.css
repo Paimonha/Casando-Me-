@@ -28,7 +28,21 @@
 }
 
 .sobre-img {
+ 
   text-align: center;
+}
+
+.gray-circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 10%;
+}
+
+.gray-circle img {
+  border-radius: 60%;
+  width: 180px;
+  height: 180px;
+  margin-left: 2rem;
 }
 
 .sobre-nos {
@@ -37,6 +51,14 @@
   gap: 20px;
   padding: 90px;
   background-color: #f2eeeb;
+}
+
+.ian-lado {
+  padding-left: 20rem;
+  font-size: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .sobre-text h1 {
@@ -192,6 +214,23 @@
     gap: 10px;
     align-items: center;
     text-align: center;
+  }
+
+  .ian-lado {
+    padding-left: 0;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .gray-circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  .gray-circle img {
+    width: 150px;
+    height: 150px;
+    margin-left: 0;
   }
 
   .modal-content {

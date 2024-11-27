@@ -10,10 +10,6 @@ const Cerimonialista = sequelize.define('Cerimonialista', {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  avaliacao: {
-    type: DataTypes.NUMBER,
-    allowNull: false,
-  },
   email: {
     type: DataTypes.STRING,
     allowNull: false,

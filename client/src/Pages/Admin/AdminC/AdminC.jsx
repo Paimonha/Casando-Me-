@@ -1,35 +1,48 @@
-import'./AdminC.css'
-import Sidebar  from '../../../../Components/SideBar/SideBar'
-function AdminC (){
-    return(
-        <>
-        <Sidebar/>
-        <div id="C">
-                <Sidebar />
-                <div id='BodyC'>
-                    <div id="Tcerimonialista">
-                        <h1>Cerimônialista</h1>
-                    </div>
-                    <div id="Ctabela">
-                        <table id='cerimonialista'>
-                            <td>Nome</td>
-                            <td>Capital</td>
-                            <td>Bandeira</td>
-                            <td>Id</td>
+import "./AdminC.css";
+import Sidebar from "../../../../Components/SideBar/SideBar";
+import axios from "axios";
+import { useState } from "react";
+import EditCerimo from './EditarCerimo';
+import ListCerimo from './ListaCerimo'
+function AdminC() {
+  const [editingCerimo, setEditingCerimo] = useState(null);
 
-                        </table>
+  const handleEdit = (cerimonialista) => {
+    setEditingCerimo(cerimonialista);
+  };
 
-                    </div>
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`http://localhost:5000/api/rota/registroCeri/${id}`);
+      window.location.reload();
+    } catch (error) {
+      console.error("Erro ao deletar produto:", error);
+    }
+  };
 
-                </div>
-
-            </div>
-
-   
-                    
-    
-        </>
-    )
-
+  const handleCerimoUpdated = () => {
+    setEditingUser(null);
+    window.location.reload();
+  };
+  return (
+    <>
+      <div id="C">
+        <Sidebar />
+        <div id="BodyC">
+          <div id="Tcerimonialista">
+            <h1>Cerimônialista</h1>
+          </div>
+          {editingCerimo ? (
+            <EditCerimo
+              ceri={editingCerimo}
+              onCerimoUpdate={handleCerimoUpdated}
+            />
+          ) : (
+            <ListCerimo onEdit={handleEdit} onDelete={handleDelete} />
+          )}
+        </div>
+      </div>
+    </>
+  );
 }
-export default AdminC
+export default AdminC;

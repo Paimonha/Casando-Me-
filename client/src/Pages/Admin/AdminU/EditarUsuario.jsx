@@ -33,13 +33,7 @@ const EditUser = ({ user, onUserUpdated }) => {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-        <input
-          type="password"
-          placeholder="Senha"
-          value={senha}
-          onChange={(e) => setSenha(e.target.value)}
-          required
-        />
+  
         <button type="submit">Atualizar</button>
       </form>
       </div>
