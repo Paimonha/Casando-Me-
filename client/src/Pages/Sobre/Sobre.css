@@ -28,8 +28,15 @@
 }
 
 .sobre-img {
- 
   text-align: center;
+  overflow: hidden; 
+}
+
+.sobre-img img {
+  max-width: 100%; 
+  height: auto; 
+  display: block; 
+  margin: 0 auto; 
 }
 
 .gray-circle {
@@ -202,23 +209,45 @@
 /* Responsividade para celulares */
 @media (max-width: 600px) {
   .sobre-box {
-    margin-left: 0;
-    width: 100%;
-    height: auto;
-    margin-top: 2rem;
+    margin-left: 0; /* Remove a margem esquerda */
+    margin-right: 0; /* Remove a margem direita */
+    width: calc(100% - 20px); /* Largura total menos um pouco para evitar overflow */
+    height: auto; /* Altura automática */
+    margin-top: 2rem; /* Margem superior */
+    padding: 1rem; /* Adiciona padding para espaçamento interno */
   }
 
   .sobre-nos {
     grid-template-columns: 1fr; /* Uma coluna para celular */
-    padding: 20px;
+    padding: 20px 10px; /* Padding reduzido nas laterais */
     gap: 10px; /* Espaço entre os itens */
-    align-items: center;
-    text-align: center;
+    align-items: center; /* Alinha itens ao centro */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .sobre-nos-icons {
+    justify-content: center; /* Centraliza os ícones */
+    margin: 0; /* Remove margens */
+    gap: 10px; /* Espaço entre os ícones */
+  }
+
+  .sobre-nos-icons svg {
+    width: 1.5rem; /* Ajusta o tamanho dos ícones */
+    margin-left: 0; /* Remove a margem esquerda */
+    margin-right: 0; /* Remove a margem direita */
+  }
+
+  .sobre-text h1 {
+    font-size: 20px; /* Tamanho de fonte menor para celular */
+  }
+
+  .sobre-text-label {
+    font-size: 15px; /* Tamanho de fonte menor para celular */
   }
 
   .modal-content {
-    width: 90%;
-    padding: 20px;
+    width: 90%; /* Largura do modal */
+    padding: 20px; /* Padding do modal */
   }
 
   .carousel-content h3 {
@@ -232,10 +261,6 @@
   .carousel-controls button {
     padding: 6px 12px; /* Padding menor para celular */
     font-size: 12px; /* Tamanho de fonte menor para celular */
-  }
-
-  .sobre-nos-icons {
-    justify-content: center; /* Centraliza os ícones */
   }
 }
 
