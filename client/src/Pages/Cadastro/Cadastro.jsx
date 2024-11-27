@@ -7,23 +7,14 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import "./Cadastro.css";
-
 function Cadastro() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
-  const [confirmSenha, setConfirmSenha] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
-
-    // Verificar se as senhas coincidem
-    if (senha !== confirmSenha) {
-      setError("As senhas não coincidem");
-      return;
-    }
-
     try {
       await axios.post("http://localhost:5000/api/rota/register", {
         email,
@@ -41,6 +32,7 @@ function Cadastro() {
         <div id="CabecalhoCadastro">
           <div id="TituloCadastro">
             <span id="SpanCadastro">
+              {" "}
               <p>Cadastro</p>
             </span>
           </div>
@@ -70,20 +62,14 @@ function Cadastro() {
                 onChange={(e) => setSenha(e.target.value)}
                 required
               />
-              <input
-                type="password"
-                placeholder="Repita a Senha"
-                value={confirmSenha}
-                onChange={(e) => setConfirmSenha(e.target.value)}
-                required
-              />
-              {error && <p className="error">{error}</p>}
+              {error && <p>{error}</p>}
               <p>
                 Já possui uma conta? Faça seu <Link to="/login">Login</Link>
               </p>
-              <div id="BtnLogar">
-                <button type="submit">Cadastrar</button>
-              </div>
+
+              <button type="submit" id="BtnLogar">
+                Cadastrar
+              </button>
             </form>
           </div>
         </div>
@@ -91,5 +77,4 @@ function Cadastro() {
     </>
   );
 }
-
 export default Cadastro;
