@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChurch,
-  faUser ,
+  faUser,
   faRightFromBracket,
 } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
@@ -15,10 +15,10 @@ function Sidebar() {
   const [isMinimized, setIsMinimized] = useState(false);
 
   const handleLogout = async () => {
-    try {
+    try {  //Envia a requisição para o Servidor
       await axios.post("http://localhost:5000/api/rota/logout");
-      localStorage.removeItem("authToken");
-      navigate("/", { replace: true });
+      localStorage.removeItem("authToken"); //Remove o token JWT
+      navigate("/", { replace: true }); //Redireciona para a pagina de HomeLogin
     } catch (error) {
       console.error("Erro ao fazer logout", error);
     }
@@ -34,7 +34,7 @@ function Sidebar() {
         <div id="MetadeIcon">
           {/* Logo visível apenas quando não minimizada */}
           {!isMinimized && <img src={Logo} alt="Logo" />}
-          
+
           {/* Botão para alternar minimização */}
 
           <div className="DivBox">
@@ -44,7 +44,7 @@ function Sidebar() {
           </div>
           <div className="DivBox">
             <Link to="/adminu">
-              <FontAwesomeIcon className="Box" icon={faUser } />
+              <FontAwesomeIcon className="Box" icon={faUser} />
             </Link>
           </div>
         </div>

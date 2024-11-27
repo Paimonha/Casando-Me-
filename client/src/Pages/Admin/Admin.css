@@ -1,20 +1,20 @@
-#Admin{
-    display: flex;
-    flex-direction: row;
+#Admin {
+  display: flex;
+  flex-direction: row;
 }
-#Corpo{
-    width: 100%;
-    background-color: #F2EEEB;
-    color: #262626;
-    height: 100vh;
+#Corpo {
+  width: 100%;
+  background-color: #f2eeeb;
+  color: #262626;
+  height: 100vh;
 }
-#Titulo{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    align-items: center;
+#Titulo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
 }
-#Titulo h1{
-    font-size: 50px;
+#Titulo h1 {
+  font-size: 50px;
 }

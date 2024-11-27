@@ -10,11 +10,17 @@ import "./Cadastro.css";
 function Cadastro() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+  const [confirmarSenha, setConfirmarSenha] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
+    // Verificar se as senhas coincidem
+    if (senha !== confirmarSenha) {
+      setError("As senhas não coincidem. Por favor, tente novamente.");
+      return;
+    }
     try {
       await axios.post("http://localhost:5000/api/rota/register", {
         email,
@@ -36,9 +42,9 @@ function Cadastro() {
               <p>Cadastro</p>
             </span>
           </div>
-          <div id="Logo">
+          {/*  <div id="Logo">
             <img src={Logo} alt="" />
-          </div>
+          </div>*/}
         </div>
 
         <div id="Cadastro">
@@ -62,11 +68,20 @@ function Cadastro() {
                 onChange={(e) => setSenha(e.target.value)}
                 required
               />
+              <input
+                type="password"
+                placeholder="Repita a Senha"
+                value={confirmarSenha}
+                onChange={(e) => setConfirmarSenha(e.target.value)}
+                required
+              />
               {error && <p>{error}</p>}
               <p>
                 Já possui uma conta? Faça seu <Link to="/login">Login</Link>
               </p>
-
+              <Link to="/">
+                <p id="LinkC">Voltar</p>
+              </Link>
               <button type="submit" id="BtnLogar">
                 Cadastrar
               </button>

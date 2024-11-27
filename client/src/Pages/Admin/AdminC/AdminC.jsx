@@ -2,8 +2,8 @@ import "./AdminC.css";
 import Sidebar from "../../../../Components/SideBar/SideBar";
 import axios from "axios";
 import { useState } from "react";
-import EditCerimo from './EditarCerimo';
-import ListCerimo from './ListaCerimo'
+import EditCerimo from "./EditarCerimo";
+import ListCerimo from "./ListaCerimo";
 function AdminC() {
   const [editingCerimo, setEditingCerimo] = useState(null);
 
@@ -21,7 +21,7 @@ function AdminC() {
   };
 
   const handleCerimoUpdated = () => {
-    setEditingUser(null);
+    setEditingCerimo(null);
     window.location.reload();
   };
   return (

@@ -1,40 +1,39 @@
 /* Estilos gerais para a página de cadastro */
 #PCadastro {
+  background-color: #f2eeeb;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: #f2eeeb;
 }
 
 /* Cabeçalho do cadastro */
 #CabecalhoCadastro {
-  
-  flex-direction: row;
-  height: 30vh;
-  flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte em telas menores */
-  justify-content: center; /* Centraliza todos os elementos no cabeçalho */
   align-items: center; /* Centraliza verticalmente os itens */
+  flex-direction: row;
+  flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte em telas menores */
+  height: 30vh;
+  justify-content: center; /* Centraliza todos os elementos no cabeçalho */
 }
 
 /* Título do cadastro */
 #TituloCadastro {
-  display: flex;
   align-items: center;
-  justify-content: center; /* Centraliza o título horizontalmente */
-  width: 100%; /* O título ocupa toda a largura disponível */
+  display: flex;
   flex: 1; /* Permite que o título ocupe espaço disponível */
   font-size: 2rem; /* Tamanho da fonte maior */
+  justify-content: center; /* Centraliza o título horizontalmente */
   padding: 0 20px; /* Adiciona padding lateral */
+  width: 100%; /* O título ocupa toda a largura disponível */
 }
 
 /* Estilo do span do cadastro */
 #SpanCadastro {
-  width: auto; /* Permite que o span ajuste seu tamanho com base no conteúdo */
-  padding: 10px 20px; /* Adiciona padding para melhorar a aparência */
+  background-color: #262626;
   border-radius: 10px;
   font-size: 30px;
+  padding: 10px 20px; /* Adiciona padding para melhorar a aparência */
   text-align: center;
-  background-color: #262626;
+  width: auto; /* Permite que o span ajuste seu tamanho com base no conteúdo */
 }
 
 #SpanCadastro p {
@@ -44,12 +43,12 @@
 
 /* Logo */
 #Logo {
-  display: flex;
   align-items: center;
-  justify-content: center; /* Alterado para centralizar no cabeçalho */
-  width: 44%;
+  display: flex;
   height: 134px;
+  justify-content: center; /* Alterado para centralizar no cabeçalho */
   padding-right: 40px;
+  width: 44%;
 }
 
 #Logo img {
@@ -58,12 +57,12 @@
 
 /* Seção de cadastro */
 #Cadastro {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 60px;
   height: 300px;
+  justify-content: center;
+  margin-top: 60px;
 }
 
 /* Estilo do texto no cadastro */
@@ -73,106 +72,107 @@
 
 /* Ícone */
 #Icone {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 /* Inputs do cadastro */
 #InputsCadastro {
-  margin-top: 5%;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 20px;
+  margin-top: 5%;
   text-align: center;
 }
 
 /* Estilo dos inputs */
 #InputsCadastro input {
-  width: 32rem; /* Usando porcentagem para responsividade */
-  max-width: 460px; /* Largura máxima */
+  background-color: #f2dcd8;
+  border-radius: 28px;
   cursor: pointer;
   height: 68px;
-  border-radius: 28px;
-  background-color: #f2dcd8;
+  max-width: 460px; /* Largura máxima */
+  width: 32rem; /* Usando porcentagem para responsividade */
 }
 
 /* Botão de login */
 #BtnLogar {
-  height: 70px;
-  width: 175px;
+  background-color: #262626;
   border-radius: 30px;
   color: #f2dcd8;
-  font-size: 20px;
-  font-family: "Inknut Antiqua", serif;
-  background-color: #262626;
   cursor: pointer;
+  font-family: "Inknut Antiqua", serif;
+  font-size: 20px;
+  height: 70px;
   transition: all 0.3s ease;
+  width: 175px;
 }
 
 #BtnLogar:hover {
   background-color: #f2dcd8;
-  color: #262626;
   box-shadow: 10px 10px 8px #444;
+  color: #262626;
   transform: scale(1.05);
 }
+
 
 /* Media Queries para responsividade */
 @media (max-width: 768px) {
   #CabecalhoCadastro {
-      flex-direction: column; /* Muda para coluna em telas menores */
-      height: auto; /* Ajusta a altura */
+    flex-direction: column; /* Muda para coluna em telas menores */
+    height: auto; /* Ajusta a altura */
   }
 
   #TituloCadastro {
-      width: 100%; /* Título ocupa toda a largura */
-      justify-content: center; /* Centraliza o título */
+    width: 100%; /* Título ocupa toda a largura */
+    justify-content: center; /* Centraliza o título */
   }
 
   #SpanCadastro {
-      width: 100%; /* Span ocupa toda a largura */
-      font-size: 24px; /* Tamanho da fonte reduzido */
+    width: 100%; /* Span ocupa toda a largura */
+    font-size: 24px; /* Tamanho da fonte reduzido */
   }
 
   #Logo {
-      width: 100%; /* Logo ocupa toda a largura */
-      padding-right: 0; /* Remove padding em telas menores */
+    width: 100%; /* Logo ocupa toda a largura */
+    padding-right: 0; /* Remove padding em telas menores */
   }
 
   #Cadastro {
-      height: auto; /* Ajusta a altura do cadastro */
+    height: auto; /* Ajusta a altura do cadastro */
   }
 
   #Cadastro p {
-      font-size: 18px; /* Tamanho da fonte reduzido */
+    font-size: 18px; /* Tamanho da fonte reduzido */
   }
 
   #InputsCadastro input {
-      width: 90%; /* Mantém a largura responsiva */
+    width: 90%; /* Mantém a largura responsiva */
   }
 
   #BtnLogar {
-      width: 90%; /* Botão ocupa 90% da largura */
+    width: 90%; /* Botão ocupa 90% da largura */
   }
 }
 
 @media (max-width: 480px) {
   #SpanCadastro {
-      font-size: 20px; /* Tamanho da fonte ainda menor */
+    font-size: 20px; /* Tamanho da fonte ainda menor */
   }
 
   #BtnLogar {
-      width: 90%; /* Botão ocupa 90% da largura em telas menores */
-      font-size: 18px; /* Tamanho da fonte do botão reduzido */
+    width: 90%; /* Botão ocupa 90% da largura em telas menores */
+    font-size: 18px; /* Tamanho da fonte do botão reduzido */
   }
 
   #InputsCadastro input {
-      height: 60px; /* Reduz a altura dos inputs */
-      font-size: 16px; /* Tamanho da fonte dos inputs reduzido */
+    height: 60px; /* Reduz a altura dos inputs */
+    font-size: 16px; /* Tamanho da fonte dos inputs reduzido */
   }
 
   #Cadastro p {
-      font-size: 16px; /* Tamanho da fonte do texto reduzido */
+    font-size: 16px; /* Tamanho da fonte do texto reduzido */
   }
 }

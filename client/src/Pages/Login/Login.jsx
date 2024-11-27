@@ -18,7 +18,7 @@ function Login() {
         "http://localhost:5000/api/rota/login",
         {
           email,
-          password,
+          password: senha,
         }
       );
 
@@ -51,9 +51,9 @@ function Login() {
         </div>
 
         <div id="Login">
-          <div id="Icone">
+          {/* <div id="Icone">
             <img src={Icone} alt="" />
-          </div>
+          </div> */}
 
           <div>
             <form onSubmit={handleLogin} id="Inputs">
@@ -65,21 +65,25 @@ function Login() {
                 required
               />
               <input
-                type="senha"
+                type="password"
                 placeholder="Senha"
                 value={senha}
                 onChange={(e) => setSenha(e.target.value)}
                 required
               />
+              <div id="BtnLogar1">
+                <button type="submit">Logar</button>
+              </div>
             </form>
           </div>
           {/*   <p>Esqueci minha <Link to="#"> senha</Link></p> */}
           <br />
-          <div id="BtnLogar">
-            <button>Logar</button>
-          </div>
+
           <Link to="/cadastro">
             <p id="LinkC">Já tem Cadastro?</p>
+          </Link>
+          <Link to="/">
+            <p id="LinkC">Voltar</p>
           </Link>
         </div>
       </div>

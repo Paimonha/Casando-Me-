@@ -1,44 +1,45 @@
 #Side {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    width: 158px;
-    background-color: #262626;
-    transition: width 0.3s; 
-    position: fixed;
+  height: 100vh;
+  width: 158px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+
+  background-color: #262626;
+  transition: width 0.3s;
 }
 
 #Side.minimized {
-    width: 70px; 
+  width: 70px;
 }
 
 #MetadeIcon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 70vh;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #MetadeLogout {
-    height: 30vh;
-    display: flex;
-    align-items: end;
-    justify-content: center;
+  height: 30vh;
+  display: flex;
+  align-items: end;
+  justify-content: center;
 }
 
 .DivBox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 113px; 
-    height: 80px; 
+  width: 113px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #MetadeIcon img {
-    width: 88%;
-    height: auto;
+  width: 88%;
+  height: auto;
 }
 
 /* #MetadeIcon:hover {
@@ -49,45 +50,45 @@
 } */
 
 .Box {
-    cursor: pointer;
-    color: #F2EEEB;
-    height: 60px;
-    width: 60px;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  color: #f2eeeb;
 }
 
 /* Responsividade para dispositivos móveis */
 @media only screen and (max-width: 768px) {
-    #Side {
-        width: 100px; 
-    }
-    
-    .DivBox {
-        width: 80px; 
-        height: 60px; 
-    }
+  #Side {
+    width: 100px;
+  }
 
-    .Box {
-        height: 50px; 
-        width: 50px; 
-    }
+  .DivBox {
+    width: 80px;
+    height: 60px;
+  }
+
+  .Box {
+    height: 50px;
+    width: 50px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-    #Side {
-        width: 70px; 
-    }
-    
-    #MetadeIcon {
-        height: auto; 
-    }
+  #Side {
+    width: 70px;
+  }
 
-    .DivBox {
-        width: 60px;
-        height: 50px;
-    }
+  #MetadeIcon {
+    height: auto;
+  }
 
-    .Box {
-        height: 40px; 
-        width: 40px;
-    }
+  .DivBox {
+    width: 60px;
+    height: 50px;
+  }
+
+  .Box {
+    height: 40px;
+    width: 40px;
+  }
 }

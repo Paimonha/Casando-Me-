@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: #F2EEEB;
+  background-color: #f2eeeb;
 }
 
 #Cabecalho {
@@ -12,64 +12,76 @@
 }
 
 #TituloL {
+  /* Config */
   display: flex;
+  width: 56%;
   align-items: center;
   justify-content: right;
-  width: 56%;
 }
 
 #TituloL span {
+  /* Config */
   width: 20%;
-  color: #F2DCD8;
+
+  /* Style */
   font-size: 30px;
+  color: #f2dcd8;
   background-color: #262626;
 }
 
 #Logo {
   display: flex;
-  align-items: center;
-  justify-content: center;
   width: 20%;
   height: 134px;
+  align-items: center;
+  justify-content: center;
 }
 
 #Logo img {
+  /* Config */
   height: 134px;
 }
 
 #Span {
+  /* Config */
+  width: 20%;
   border-radius: 15px;
   text-align: center;
-  width: 20%;
 }
 
 /* Login */
+
 #Login {
+  /* Config */
   display: flex;
+  height: 300px;
+  margin-top: 60px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 60px;
-  height: 300px;
 }
 
 #Login p {
+  /* Style */
   font-size: 20px;
 }
 
 #Login #LinkC {
+  /* Config */
   text-align: center;
 }
 
 #Icone {
+  /* Config */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #Inputs {
-  margin-top: 2%;
+  /* Config */
   display: flex;
+  margin-top: 2%;
   flex-direction: column;
   align-items: center;
   gap: 20px;
@@ -77,24 +89,37 @@
 }
 
 #Inputs input {
+  /* Config */
   width: 460px;
   height: 68px;
-  border-radius: 28px;
   padding: 20px;
-  background-color: #F2DCD8;
-}
 
-#BtnLogar button {
+  /* Style */
+  border-radius: 28px;
+  background-color: #f2dcd8;
+}
+#BtnLogar1 {
+  height: 70px;
+  width: 175px;
+  border-radius: 30px;
+  color: #f2dcd8;
+  font-size: 20px;
+  font-family: "Inknut Antiqua", serif;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#BtnLogar1 button {
   height: 70px;
   width: 175px;
   border-radius: 30px;
   background-color: #262626;
-  color: #F2DCD8;
+  color: #f2dcd8;
   font-size: 20px;
   font-family: "Inknut Antiqua", serif;
 }
 
-#BtnLogar button:hover {
+#BtnLogar1 button:hover {
   transition: all 0.3s ease;
   background-color: #f2dcd8;
   color: #262626;
@@ -105,66 +130,66 @@
 /* Media Queries para Responsividade */
 @media (max-width: 1200px) {
   #TituloL span {
-      font-size: 24px; /* Diminui o tamanho da fonte */
-      width: 30%; /* Ajusta a largura */
+    font-size: 24px; /* Diminui o tamanho da fonte */
+    width: 30%; /* Ajusta a largura */
   }
 
   #Inputs input {
-      width: 80%; /* Ajusta a largura dos inputs */
+    width: 80%; /* Ajusta a largura dos inputs */
   }
 
-  #BtnLogar button {
-      width: 150px; /* Ajusta a largura do botão */
-      font-size: 18px; /* Diminui o tamanho da fonte do botão */
+  #BtnLogar1 button {
+    width: 150px; /* Ajusta a largura do botão */
+    font-size: 18px; /* Diminui o tamanho da fonte do botão */
   }
 }
 
 @media (max-width: 768px) {
   #Cabecalho {
-      flex-direction: column; /* Muda para coluna em telas menores */
-      height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    flex-direction: column; /* Muda para coluna em telas menores */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
   }
 
   #TituloL {
-      width: 100%; /* Ajusta a largura */
-      justify-content: center; /* Centraliza o conteúdo */
+    width: 100%; /* Ajusta a largura */
+    justify-content: center; /* Centraliza o conteúdo */
   }
 
   #Logo {
-      width: 100%; /* Ajusta a largura */
-      height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    width: 100%; /* Ajusta a largura */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
   }
 
   #Inputs input {
-      width: 90%; /* Ajusta a largura dos inputs */
-      height: 50px; /* Ajusta a altura dos inputs */
+    width: 90%; /* Ajusta a largura dos inputs */
+    height: 50px; /* Ajusta a altura dos inputs */
   }
 
-  #BtnLogar button {
-      width: 80%; /* Botão ocupa 80% da largura do contêiner */
-      height: 50px; /* Ajusta a altura do botão */
-      font-size: 16px; /* Diminui o tamanho da fonte do botão */
+  #BtnLogar1 button {
+    width: 80%; /* Botão ocupa 80% da largura do contêiner */
+    height: 50px; /* Ajusta a altura do botão */
+    font-size: 16px; /* Diminui o tamanho da fonte do botão */
   }
 }
 
 @media (max-width: 480px) {
   #TituloL span {
-      font-size: 18px; /* Diminui o tamanho da fonte */
-      width: 40%; /* Ajusta a largura */
+    font-size: 18px; /* Diminui o tamanho da fonte */
+    width: 40%; /* Ajusta a largura */
   }
 
   #Inputs input {
-      width: 95%; /* Ajusta a largura dos inputs */
-      height: 45px; /* Ajusta a altura dos inputs */
+    width: 95%; /* Ajusta a largura dos inputs */
+    height: 45px; /* Ajusta a altura dos inputs */
   }
 
-  #BtnLogar button {
-      width: 90%; /* Botão ocupa 90% da largura do contêiner */
-      height: 45px; /* Ajusta a altura do botão */
-      font-size: 16px; /* Mantém o tamanho da fonte do botão */
+  #BtnLogar1 button {
+    width: 90%; /* Botão ocupa 90% da largura do contêiner */
+    height: 45px; /* Ajusta a altura do botão */
+    font-size: 16px; /* Mantém o tamanho da fonte do botão */
   }
 
   #Login p {
-      font-size: 16px; /* Diminui o tamanho da fonte do parágrafo */
+    font-size: 16px; /* Diminui o tamanho da fonte do parágrafo */
   }
 }

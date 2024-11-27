@@ -1,5 +1,5 @@
 import "./Fornecedor.css";
-import Fornecedor from "../../../Components/FornecedorDados";
+import Fornecedor from "../../../Components/DadosFornecedor_Galeria/FornecedorDados";
 import fornecedoresDados from "../../data/FornecedorDados";
 import Header from "../../../Components/Header/Header";
 

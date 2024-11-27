@@ -1,7 +1,7 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../bd/banco');
+const { DataTypes } = require("sequelize");
+const sequelize = require("../bd/banco");
 
-const Cerimonialista = sequelize.define('Cerimonialista', {
+const Cerimonialista = sequelize.define("Cerimonialista", {
   nome: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -26,9 +26,6 @@ const Cerimonialista = sequelize.define('Cerimonialista', {
     type: DataTypes.STRING,
     allowNull: false,
   },
-
-
-
 });
 
-module.exports = Cerimonialista
+module.exports = Cerimonialista;

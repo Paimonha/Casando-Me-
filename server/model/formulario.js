@@ -1,7 +1,7 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../bd/banco');
+const { DataTypes } = require("sequelize");
+const sequelize = require("../bd/banco");
 
-const Forms = sequelize.define('Forms', {
+const Forms = sequelize.define("Forms", {
   nome: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -18,9 +18,6 @@ const Forms = sequelize.define('Forms', {
     type: DataTypes.STRING,
     allowNull: false,
   },
-
-
-
 });
 
-module.exports = Forms
+module.exports = Forms;

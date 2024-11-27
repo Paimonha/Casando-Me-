@@ -94,7 +94,7 @@ function Sobre() {
             </svg>
           </div>
           <div className="sobre-img">
-          <img src="../../public/Tech.svg" alt="" />
+            <img src="../../public/Tech.svg" alt="" />
           </div>
           <div className="sobre-text">
             <h1>Tech Leader</h1>
@@ -122,7 +122,7 @@ function Sobre() {
             </svg>
           </div>
           <div className="sobre-img">
-          <img src="../../public/Developer.svg" alt="" />
+            <img src="../../public/Developer.svg" alt="" />
           </div>
           <div className="sobre-text">
             <h1>Desenvolvedores</h1>
@@ -150,13 +150,13 @@ function Sobre() {
             </svg>
           </div>
           <div className="sobre-img">
-          <img src="../../public/Manager.svg" alt="" />
+            <img src="../../public/Manager.svg" alt="" />
           </div>
           <div className="sobre-text">
             <h1>Task Manager</h1>
             <label className="sobre-text-label">
-            Cuida das tarefas que serao realizadas pelo grupo e cria diagramas
-            de classes para o projeto
+              Cuida das tarefas que serao realizadas pelo grupo e cria diagramas
+              de classes para o projeto
             </label>
             <button
               onClick={() => handleButtonClick("taskManager")}

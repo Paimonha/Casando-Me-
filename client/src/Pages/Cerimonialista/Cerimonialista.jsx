@@ -14,7 +14,7 @@ function Cerimonialista() {
   useEffect(() => {
     loadCerimo();
   }, []);
-  
+
   const loadCerimo = async () => {
     try {
       const response = await axios.get(
@@ -35,7 +35,9 @@ function Cerimonialista() {
       <div id="ListaC">
         <div id="ConteudoC">
           {cerimonialistas.map((cerimonialista) => (
-            <div key={cerimonialista.id} id="listC"> {/* Alterado de span para div */}
+            <div key={cerimonialista.id} id="listC">
+              {" "}
+              {/* Alterado de span para div */}
               <div id="DivImg">
                 <img src={Elipse} alt="" />
               </div>
@@ -44,10 +46,14 @@ function Cerimonialista() {
                 <h3>{cerimonialista.descricao}</h3>
               </div>
               <div id="DivIcon">
-                <Link to={cerimonialista.instagram} className="Icons">
+                <Link
+                  to="https://www.instagram.com/ianlucca.costa/"
+                  target="_blank"
+                  className="Icons"
+                >
                   <FontAwesomeIcon icon={faInstagram} />
                 </Link>
-                <Link to={cerimonialista.whatsapp} className="Icons">
+                <Link to="https://web.whatsapp.com/" className="Icons" target="_blank">
                   <FontAwesomeIcon icon={faWhatsapp} />
                 </Link>
                 <Link to="/formulario" className="Icons">
@@ -59,11 +65,10 @@ function Cerimonialista() {
         </div>
       </div>
 
-      
       <Link to="/cadastroc">
-      <div className="ian-button" id="ian-button">
-            Cadastre-se como cerimonialista
-      </div>
+        <div className="ian-button" id="ian-button">
+          Cadastre-se como cerimonialista
+        </div>
       </Link>
     </>
   );

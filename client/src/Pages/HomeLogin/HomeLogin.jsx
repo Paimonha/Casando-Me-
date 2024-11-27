@@ -13,10 +13,10 @@ function HomeLogin() {
         <div id="logo">
           <img src="../../public/Logo3.svg" alt="" />
         </div>
-        
-<div className="Titulo">
-  <img src="../../public/Titulo_Img.svg" alt="" />
-</div>
+
+        <div className="Titulo">
+          <img src="../../public/Titulo_Img.svg" alt="" />
+        </div>
 
         <div id="texto">
           <span>

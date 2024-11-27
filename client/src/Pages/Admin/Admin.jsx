@@ -9,7 +9,6 @@ function Admin() {
 
         <div id="Corpo">
           <span id="Titulo">
-            
             <h1>Bem vindo! </h1>
             <h2>Tela de Administrador</h2>
           </span>

@@ -1,12 +1,12 @@
-import Header from '../../../Components/Header/Header'
-import "./Home.css"
-function Home(){
-    return(
-        <>
-        <div>
+import Header from "../../../Components/Header/Header";
+import "./Home.css";
+function Home() {
+  return (
+    <>
+      <div>
         <Header />
-        </div>
-        </>
-    )
+      </div>
+    </>
+  );
 }
-export default Home
+export default Home;

@@ -29,14 +29,14 @@
 
 .sobre-img {
   text-align: center;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .sobre-img img {
-  max-width: 100%; 
-  height: auto; 
-  display: block; 
-  margin: 0 auto; 
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .gray-circle {
@@ -184,7 +184,6 @@
 }
 
 .sobre-text {
-  background: aliceblue;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -202,16 +201,14 @@
   font-family: "Inknut Antiqua", serif;
 }
 
-
-
-
-
 /* Responsividade para celulares */
 @media (max-width: 600px) {
   .sobre-box {
     margin-left: 0; /* Remove a margem esquerda */
     margin-right: 0; /* Remove a margem direita */
-    width: calc(100% - 20px); /* Largura total menos um pouco para evitar overflow */
+    width: calc(
+      100% - 20px
+    ); /* Largura total menos um pouco para evitar overflow */
     height: auto; /* Altura automática */
     margin-top: 2rem; /* Margem superior */
     padding: 1rem; /* Adiciona padding para espaçamento interno */
@@ -336,10 +333,10 @@
 
   .carousel-controls button {
     padding: 10px 20px; /* Aumenta o padding do botão */
-    font-size: 16px; 
+    font-size: 16px;
   }
 
   .sobre-nos-icons {
-    justify-content: space-between; 
+    justify-content: space-between;
   }
 }

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Logo from "../../../public/Logo2.svg";
 import Icone from "../../Svg/Icone.svg";
+import InputMask from "react-input-mask";
 import "./CadastroC.css";
 
 function Cadastroc() {
@@ -19,14 +20,14 @@ function Cadastroc() {
     e.preventDefault();
     try {
       await axios.post("http://localhost:5000/api/rota/registroCeri", {
-        nome, 
-        email, 
-        telefone, 
-        whatsapp, 
-        instagram, 
+        nome,
+        email,
+        telefone,
+        whatsapp,
+        instagram,
         descricao,
       });
-      navigate("/login"); // Redirecionar para a página de login após o cadastro
+      navigate("/cerimonialista"); // Redirecionar para a página de login após o cadastro
     } catch (error) {
       setError(error.response?.data?.error || "Erro ao cadastrar");
     }
@@ -42,13 +43,12 @@ function Cadastroc() {
               <p>Cadastro Cerimonialistas</p>
             </span>
           </div>
-          <div id="Logo">
+          {/*  <div id="Logo">
             <img src={Logo} alt="" />
-          </div>
+          </div>*/}
         </div>
 
         <div id="Cadastro">
-        
           <div>
             <form onSubmit={handleRegisterCeri} id="InputsCadastro">
               <input
@@ -65,25 +65,37 @@ function Cadastroc() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <input type="text" placeholder="Telefone" 
-              required
-              value={telefone}
-              onChange={(e) => setTelefone(e.target.value)}/>
+              <InputMask
+                mask="(99) 99999-9999"
+                value={telefone}
+                onChange={(e) => setTelefone(e.target.value)}
+                placeholder="Telefone"
+                required
+              />
 
-              <input type="text" placeholder="Whatsap"
-              required
-              value={whatsapp}
-              onChange={(e) => setWhatsapp(e.target.value)} />
+              <InputMask
+                mask="(99) 99999-9999"
+                value={whatsapp}
+                onChange={(e) => setWhatsapp(e.target.value)}
+                placeholder="WhatsApp"
+                required
+              />
 
-              <input type="text" placeholder="instagram" 
-              required
-              value={instagram}
-              onChange={(e) => setInstagram(e.target.value)}/>
+              <input
+                type="text"
+                placeholder="instagram"
+                required
+                value={instagram}
+                onChange={(e) => setInstagram(e.target.value)}
+              />
 
-              <input type="text" placeholder="descricao" 
-              required
-              value={descricao}
-              onChange={(e) => setDescricao(e.target.value)}/>
+              <input
+                type="text"
+                placeholder="descricao"
+                required
+                value={descricao}
+                onChange={(e) => setDescricao(e.target.value)}
+              />
               {error && <p>{error}</p>}
               <button type="submit" id="BtnLogar">
                 Cadastrar

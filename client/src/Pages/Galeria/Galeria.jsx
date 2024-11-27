@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../../../Components/Header/Header";
 import "./Galeria.css";
-import Galerias from "../../../Components/GaleriaComponents";
+import Galerias from "../../../Components/DadosFornecedor_Galeria/GaleriaComponents";
 import GaleriaDados from "../../data/GaleriaDados";
 
 function Galeria() {

@@ -1,36 +1,36 @@
 #ConteudoC {
-  text-align: center;
+  align-items: stretch; /* Alinha todos os itens para ocupar a mesma altura */
+  display: grid;
   gap: 20px;
-  margin-top: 5rem;
+  grid-template-columns: repeat(4, 1fr);
+  height: auto;
   margin-left: auto; /* Margem esquerda automática para centralizar */
   margin-right: auto; /* Margem direita automática para centralizar */
-  width: 96%; /* Largura do contêiner */
+  margin-top: 5rem;
   max-width: 1200px; /* Largura máxima */
-  height: auto; 
-  display: grid; 
-  grid-template-columns: repeat(4, 1fr); 
-  align-items: stretch; /* Alinha todos os itens para ocupar a mesma altura */
+  text-align: center;
+  width: 96%; /* Largura do contêiner */
 }
 
 #listC {
   border: 1px solid #000;
-  border-radius: 20px; 
-  width: 100%; /* Largura total do card */
-  display: flex; 
-  flex-direction: column; 
-  gap: 10px; 
-  padding: 20px; 
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   min-height: 200px; /* Ajuste a altura mínima conforme necessário */
+  padding: 20px;
+  width: 100%; /* Largura total do card */
 }
 
 #DivImg {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
 }
 
 #DivImg img {
-  height: auto; 
+  height: auto;
 }
 
 #DivInfo {
@@ -39,113 +39,112 @@
 
 #DivIcon {
   display: flex;
-  flex-direction: row; 
-  justify-content: center; 
-  gap: 10px; 
-  padding-top: 10px; 
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  padding-top: 10px;
 }
 
 #DivIcon svg {
   color: #403c3d;
-  height: 28px; 
+  height: 28px;
 }
 
 .ian-button {
-  background-color: #403C3D;
-  color: #fff;
-  width: 40rem;
-  height: 4.125rem;
-  padding-top: 1.5rem;
-  
-  border-radius: 65px;
-  text-align: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 24px;
-  cursor: pointer;
+  background-color: #403c3d;
   border: 4px solid #000;
-  padding-top: 0.5em;
+  border-radius: 65px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  height: 4.125rem;
   margin-left: 40rem;
   margin-top: 2rem;
+  padding-top: 0.5em;
+  text-align: center;
+  width: 40rem;
 }
 
 .ian-button-contate {
-  background-color: #403C3D;
-  opacity: 100%;
+  background-color: #403c3d;
+  border: 4px solid #000;
+  border-radius: 65px;
   color: #fff;
-  width: 20rem;
+  cursor: pointer;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 24px;
   height: 4.125rem;
-  padding-top: 0.5em;
-  margin-top: 2rem;
   margin-bottom: 2rem;
   margin-left: 20rem;
-  border-radius: 65px;
+  margin-top: 2rem;
+  opacity: 100%;
+  padding-top: 0.5em;
   text-align: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 24px;
-  cursor: pointer;
-  border: 4px solid #000;
+  width: 20rem;
 }
 
-.ian-button-contate:hover, .ian-button:hover {
-  background-color: #706E6f;
+.ian-button-contate:hover,
+.ian-button:hover {
+  background-color: #706e6f;
   cursor: pointer;
-  transition: ease .2s;
-  
+  transition: ease 0.2s;
 }
 
 @media (max-width: 768px) {
   #ConteudoC {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
   }
 
   #listC {
-    gap: 15px; 
+    gap: 15px;
   }
 
   #DivIcon {
-    flex-direction: row; 
+    flex-direction: row;
     gap: 10px;
   }
 }
 
 @media (max-width: 480px) {
   #ConteudoC {
-    margin-left: 0; 
-    margin-top: 2rem; 
-    grid-template-columns: 1fr; 
+    margin-left: 0;
+    margin-top: 2rem;
+    grid-template-columns: 1fr;
   }
 
   #DivIcon {
-    flex-direction: row; 
+    flex-direction: row;
     gap: 5px;
   }
 
   #DivIcon svg {
-    height: 20px; 
+    height: 20px;
   }
 }
 
 @media (max-width: 480px) {
-  .ian-button, .ian-button-contate {
-      font-size: 18px;
-      height: auto;
+  .ian-button,
+  .ian-button-contate {
+    font-size: 18px;
+    height: auto;
   }
-
 }
 
 @media (max-width: 1200px) {
-
   .ian-button {
-      width: 90%; 
-      margin-left: 0;
-      margin-right: 0;
-      top: auto; 
+    width: 90%;
+    margin-left: 0;
+    margin-right: 0;
+    top: auto;
   }
 
   .ian-button-contate {
-      width: 90%; 
-      margin-left: 0;
-      margin-right: 0; 
+    width: 90%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 /* .cerimonialista-box {
@@ -240,5 +239,3 @@
     cursor: pointer;
     border: 4px solid #000;
 } */
-
-

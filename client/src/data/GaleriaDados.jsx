@@ -37,5 +37,4 @@ const GaleriaDados = [
   },
 ];
 
-
 export default GaleriaDados;

@@ -29,10 +29,11 @@
 
 /* Estilo dos cards */
 .Card img {
-  border-radius: 12px;
-  display: block;
   width: 450px;
   height: 340px;
+  display: block;
+
+  border-radius: 12px;
   border-style: solid;
   border-width: 2px;
   border-color: var(--color-light-cream);
@@ -40,8 +41,9 @@
 
 /* Filtro e efeito hover para as imagens */
 .Filtro {
-  object-fit: cover;
   width: 100%;
+  object-fit: cover;
+
   filter: saturate(0%);
   overflow: hidden;
   transition: transform 0.3s ease;
