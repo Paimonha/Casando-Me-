@@ -1,47 +1,93 @@
-
-#Side{
+#Side {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
     width: 158px;
     background-color: #262626;
+    transition: width 0.3s; 
+    position: fixed;
 }
 
-#MetadeIcon{
+#Side.minimized {
+    width: 70px; 
+}
+
+#MetadeIcon {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     height: 70vh;
 }
-#MetadeLogout{
-   height: 30vh;
+
+#MetadeLogout {
+    height: 30vh;
     display: flex;
     align-items: end;
     justify-content: center;
 }
-.DivBox{
+
+.DivBox {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 113px;
-    height: 80px;
-  
-
+    width: 113px; 
+    height: 80px; 
 }
-#MetadeIcon  :hover{
+
+#MetadeIcon img {
+    width: 88%;
+    height: auto;
+}
+
+/* #MetadeIcon:hover {
     background-color: #403C3D;
     transition: 1s;
     border-radius: 16px;
-    color: #F2DCD8;;
+    color: #F2DCD8;
+} */
 
-
-}
-.Box{
+.Box {
     cursor: pointer;
     color: #F2EEEB;
     height: 60px;
     width: 60px;
-   
+}
+
+/* Responsividade para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+    #Side {
+        width: 100px; 
+    }
+    
+    .DivBox {
+        width: 80px; 
+        height: 60px; 
+    }
+
+    .Box {
+        height: 50px; 
+        width: 50px; 
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #Side {
+        width: 70px; 
+    }
+    
+    #MetadeIcon {
+        height: auto; 
+    }
+
+    .DivBox {
+        width: 60px;
+        height: 50px;
+    }
+
+    .Box {
+        height: 40px; 
+        width: 40px;
+    }
 }
