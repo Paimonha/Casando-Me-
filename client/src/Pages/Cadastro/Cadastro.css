@@ -10,7 +10,7 @@ a {
 }
 
 #CabecalhoCadastro {
-    display: flex;
+   
     flex-direction: row;
     height: 30vh;
 
@@ -106,8 +106,6 @@ a {
     height: 70px;
     width: 175px;
     border-radius: 30px;
-    background-color: #262626;
-    box-shadow: 10px 10px 8px #444;
     color: #F2DCD8;
     font-size: 20px;
     font-family: "Inknut Antiqua", serif;
@@ -119,5 +117,71 @@ a {
     box-shadow: 10px 10px 8px #444;
     transform: scale(1.05);
   } 
+ 
   
+  @media (max-width: 1200px) {
+    #SpanCadastro {
+        font-size: 24px; /* Diminui o tamanho da fonte */
+        width: 30%; /* Ajusta a largura */
+    }
+
+    #InputsCadastro input {
+        width: 80%; /* Ajusta a largura dos inputs */
+    }
+
+    #BtnLogar {
+        width: 150px; /* Ajusta a largura do botão */
+        font-size: 18px; /* Diminui o tamanho da fonte do botão */
+    }
+}
+
+@media (max-width: 768px) {
+    #CabecalhoCadastro {
+        flex-direction: column; /* Muda para coluna em telas menores */
+        height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    }
+
+    #TituloCadastro {
+        width: 100%; /* Ajusta a largura */
+        justify-content: center; /* Centraliza o conteúdo */
+    }
+
+    #Logo {
+        width: 100%; /* Ajusta a largura */
+        height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    }
+
+    #InputsCadastro input {
+        width: 90%; /* Ajusta a largura dos inputs */
+        height: 50px; /* Ajusta a altura dos inputs */
+    }
+
+    #BtnLogar {
+        width: 80%; /* Botão ocupa 80% da largura do contêiner */
+        height: 50px; /* Ajusta a altura do botão */
+        font-size: 16px; /* Diminui o tamanho da fonte do botão */
+    }
+}
+
+@media (max-width: 480px) {
+    #SpanCadastro {
+        font-size: 18px; /* Diminui o tamanho da fonte */
+        width: 40%; /* Ajusta a largura */
+    }
+
+    #InputsCadastro input {
+        width: 95%; /* Ajusta a largura dos inputs */
+        height: 45px; /* Ajusta a altura dos inputs */
+    }
+
+    #BtnLogar {
+        width: 90%; /* Botão ocupa 90% da largura do contêiner */
+        height: 45px; /* Ajusta a altura do botão */
+        font-size: 16px; /* Mantém o tamanho da fonte do botão */
+    }
+
+    #Cadastro p {
+        font-size: 16px; /* Diminui o tamanho da fonte do parágrafo */
+    }
+}
   
