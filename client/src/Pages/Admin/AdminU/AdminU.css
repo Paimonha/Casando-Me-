@@ -20,12 +20,10 @@
 #ListaU {
     display: flex;
     justify-content: center;
-    padding: 50px;
-    width: 100%;
+    padding-left: 70px;
+    width: 90%;
     height: 90vh;
 }
-
-
 
 #Conteudo {
     display: grid;
@@ -46,7 +44,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-
+    margin-left: 10px;
 }
 
 #list h1 {
@@ -59,7 +57,6 @@
     height: 90vh;
     display: flex;
     align-items: center;
-    
     flex-direction: column;
 }
 
@@ -71,8 +68,6 @@
     cursor: pointer;
     color: #F2DCD8;
     transition: all 0.3s ease;
-
-
 }
 
 #ButtonsU button:hover {
@@ -88,16 +83,18 @@
     flex-direction: column;
     align-items: center;
 }
-#Forms input{
+
+#Forms input {
     border-radius: 15px; 
     height: 67px;
     width: 760px;  
     padding: 1rem;
     background-color: #F1DCD7;
     font-size: 18px;
-    border: solid 1px black
+    border: solid 1px black;
 }
-#Forms button{
+
+#Forms button {
     background-color: #fff;
     border: 2px solid #403C3D;
     box-shadow: 8px 8px 6px #262626;
@@ -113,20 +110,19 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    width: 30px;
-    border-radius: 65px; 
-    height: 67px;
     width: 175px;  
+    height: 67px;
     font-size: 18px;
     min-height: 67px;
 }
-#Forms button:hover{
+
+#Forms button:hover {
     background-color: #262626;
     box-shadow: 10px 10px 8px #444;
     color: #F2DCD8;
-
 }
-#DivForms{
+
+#DivForms {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -138,4 +134,43 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Media Queries para Responsividade */
+@media only screen and (max-width: 768px) {
+    #Conteudo {
+        grid-template-columns: 1fr; /* Coloca todos os itens em uma coluna */
+        gap: 20px; /* Reduz o espaço entre os itens */
+    }
+
+    #Forms {
+        width: 80%; /* Aumenta a largura dos formulários em telas menores */
+    }
+
+    #Forms input {
+        width: 100%; /* Faz os inputs ocuparem 100% da largura disponível */
+    }
+
+    #list h1 {
+        font-size: 14px; /* Aumenta o tamanho da fonte para cabeçalhos em telas menores */
+    }
+
+    .btnU {
+        width: 80%; /* Botões ocupam mais espaço em telas menores */
+    }
+
+    #CabecalhoU {
+        font-size: 13px;
+        padding-left: 67px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #Forms {
+        width: 90%; /* Aumenta a largura dos formulários em smartphones */
+    }
+
+    #list {
+        margin-left: 15px; /* Aumenta a margem à esquerda do card em smartphones */
+    }
 }

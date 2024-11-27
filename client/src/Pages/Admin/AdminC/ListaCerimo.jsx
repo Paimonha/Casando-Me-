@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../AdminU/AdminU.css'
+import '../AdminC/AdminC.css'
 const ListCerimo = ({onEdit, onDelete}) =>{
     const [cerimonialistas, setCerimo] = useState([]);
 

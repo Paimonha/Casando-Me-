@@ -9,9 +9,9 @@ function Admin() {
 
         <div id="Corpo">
           <span id="Titulo">
-            <img src={Logo} alt="" />
-            <h1>Bem vindo </h1>
-            <h2> Tela de Admin</h2>
+            
+            <h1>Bem vindo! </h1>
+            <h2>Tela de Administrador</h2>
           </span>
         </div>
       </div>
