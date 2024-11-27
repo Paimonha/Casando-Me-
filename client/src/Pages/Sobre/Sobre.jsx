@@ -155,8 +155,8 @@ function Sobre() {
           <div className="sobre-text">
             <h1>Task Manager</h1>
             <label className="sobre-text-label">
-              Cuida das tarefas que serao realizadas pelo grupo e cria diagramas
-              de classes
+            Cuida das tarefas que serao realizadas pelo grupo e cria diagramas
+            de classes para o projeto
             </label>
             <button
               onClick={() => handleButtonClick("taskManager")}
