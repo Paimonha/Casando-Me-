@@ -1,0 +1,168 @@
+a {
+  text-decoration: none;
+}
+
+#BtnLogar {
+  border-radius: 30px;
+  color: #f2dcd8;
+  font-family: "Inknut Antiqua", serif;
+  font-size: 20px;
+  height: 70px;
+  width: 175px;
+}
+
+#CabecalhoCadastro {
+  flex-direction: row;
+  height: 30vh;
+}
+
+#Cadastro {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+#Cadastro p {
+  font-size: 20px;
+}
+
+#Icone {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+#InputsCadastro {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 5%;
+  text-align: center;
+}
+
+#InputsCadastro button:hover {
+  background-color: #f2dcd8;
+  box-shadow: 10px 10px 8px #444;
+  color: #262626;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+#InputsCadastro input {
+  background-color: #f2dcd8;
+  border-radius: 28px;
+  cursor: pointer;
+  height: 68px;
+  padding: 20px;
+  width: 460px;
+}
+
+#Logo {
+  align-items: center;
+  display: flex;
+  height: 134px;
+  justify-content: right;
+  padding-right: 40px;
+  width: 44%;
+}
+
+#Logo img {
+  height: 134px;
+}
+
+#PCadastro {
+  background-color: #f2eeeb;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#SpanCadastro {
+  background-color: #262626;
+  border-radius: 10px;
+  font-size: 30px;
+  text-align: center;
+  width: 25%;
+}
+
+#SpanCadastro p {
+  color: #f2dcd8;
+}
+
+#TituloCadastro {
+  align-items: center;
+  display: flex;
+  justify-content: right;
+  width: 60%;
+}
+
+
+@media (max-width: 1200px) {
+  #SpanCadastro {
+    font-size: 24px; /* Diminui o tamanho da fonte */
+    width: 30%; /* Ajusta a largura */
+  }
+
+  #InputsCadastro input {
+    width: 80%; /* Ajusta a largura dos inputs */
+  }
+
+  #BtnLogar {
+    width: 150px; /* Ajusta a largura do botão */
+    font-size: 18px; /* Diminui o tamanho da fonte do botão */
+  }
+}
+
+@media (max-width: 768px) {
+  #CabecalhoCadastro {
+    flex-direction: column; /* Muda para coluna em telas menores */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+  }
+
+  #TituloCadastro {
+    width: 100%; /* Ajusta a largura */
+    justify-content: center; /* Centraliza o conteúdo */
+  }
+
+  #Logo {
+    width: 100%; /* Ajusta a largura */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+  }
+
+  #InputsCadastro input {
+    width: 90%; /* Ajusta a largura dos inputs */
+    height: 50px; /* Ajusta a altura dos inputs */
+  }
+
+  #BtnLogar {
+    width: 80%; /* Botão ocupa 80% da largura do contêiner */
+    height: 50px; /* Ajusta a altura do botão */
+    font-size: 16px; /* Diminui o tamanho da fonte do botão */
+  }
+}
+
+@media (max-width: 480px) {
+  #SpanCadastro {
+    font-size: 18px; /* Diminui o tamanho da fonte */
+    width: 40%; /* Ajusta a largura */
+  }
+
+  #InputsCadastro input {
+    width: 95%; /* Ajusta a largura dos inputs */
+    height: 45px; /* Ajusta a altura dos inputs */
+  }
+
+  #BtnLogar {
+    width: 90%; /* Botão ocupa 90% da largura do contêiner */
+    height: 45px; /* Ajusta a altura do botão */
+    font-size: 16px; /* Mantém o tamanho da fonte do botão */
+  }
+
+  #Cadastro p {
+    font-size: 16px; /* Diminui o tamanho da fonte do parágrafo */
+  }
+}

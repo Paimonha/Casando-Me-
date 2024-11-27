@@ -1,0 +1,80 @@
+#C {
+  display: flex;
+  flex-direction: row; /* Direção padrão como linha */
+  width: 100%; /* Garante que o container ocupe 100% da largura */
+}
+
+#BodyC {
+  display: flex;
+  flex-direction: column; /* Mantém o conteúdo em coluna */
+  width: 100%; /* O conteúdo ocupa toda a largura disponível */
+  box-sizing: border-box; /* Inclui padding e border no tamanho do elemento */
+}
+#Conteudo{
+  padding-left: 200px;
+}
+#Tcerimonialista {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20vh; /* Altura do cabeçalho */
+  box-sizing: border-box;
+  overflow-wrap: break-word; /* Garante que palavras longas se ajustem */
+  text-align: center; /* Alinha o texto centralizado */
+  padding: 10px; /* Adiciona padding para evitar que o texto fique colado nas bordas */
+}
+
+#listau {
+  display: flex; /* Alinha os itens em linha */
+  flex-direction: column; /* Muda a direção para coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  width: 100%; /* Faz com que a lista ocupe toda a largura */
+  box-sizing: border-box; /* Inclui padding e border no tamanho do elemento */
+
+}
+
+@media only screen and (max-width: 768px) {
+  #C {
+    flex-direction: column; /* Muda a direção para coluna em tablets */
+  }
+  #BodyC {
+    font-size: 18px;
+    padding: 5px; /* Reduz o padding em telas menores */
+  }
+  #Tcerimonialista {
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    overflow: hidden; /* Garante que o conteúdo não transborde */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #C {
+    flex-direction: column; /* Muda a direção para coluna em smartphones */
+  }
+  #BodyC {
+    font-size: 13px;
+    padding: 5px; /* Reduz o padding em smartphones */
+  }
+  #Tcerimonialista {
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    overflow: hidden; /* Garante que o conteúdo não transborde */
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #BodyC {
+    font-size: 13px; /* Ajusta o tamanho da fonte para telas muito pequenas */
+    padding: 5px; /* Mantém um pequeno padding */
+  }
+  #Tcerimonialista {
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    padding: 5px; /* Adiciona padding para evitar que o texto fique colado nas bordas */
+    overflow: hidden; /* Garante que o conteúdo não transborde */
+    padding-left: 5rem;
+  }
+  #listau {
+    margin-left: 10px; /* Adiciona um pequeno deslocamento para a direita */
+    margin-right: 10px; /* Adiciona um pequeno deslocamento para a esquerda */
+    width: calc(100% - 20px); /* Ajusta a largura para compensar o margin */
+  }
+}
