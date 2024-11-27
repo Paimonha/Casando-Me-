@@ -2,53 +2,152 @@
   text-align: center;
   gap: 20px;
   margin-top: 5rem;
-  margin-left: 1rem;
-  width: 30%;
-  height: 251px;
-  display: flex;
-  flex-direction: column;
+  margin-left: auto; /* Margem esquerda automática para centralizar */
+  margin-right: auto; /* Margem direita automática para centralizar */
+  width: 96%; /* Largura do contêiner */
+  max-width: 1200px; /* Largura máxima */
+  height: auto; 
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
+  align-items: stretch; /* Alinha todos os itens para ocupar a mesma altura */
 }
 
 #listC {
   border: 1px solid #000;
-  border-radius: 60px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+  border-radius: 20px; 
+  width: 100%; /* Largura total do card */
+  display: flex; 
+  flex-direction: column; 
+  gap: 10px; 
+  padding: 20px; 
+  min-height: 200px; /* Ajuste a altura mínima conforme necessário */
 }
-#ImgC {
-  width: 10%;
-  background-color: #403c3d;
-}
+
 #DivImg {
-  padding-left: 10px;
   display: flex;
   align-items: center;
-  height: 251px;
   justify-content: center;
 }
+
 #DivImg img {
-  width: 100%;
+  height: auto; 
 }
 
 #DivInfo {
-  width: 40%;
-  height: 251px;
   text-align: center;
 }
+
 #DivIcon {
-  width: 20%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-#DivIcon svg {
-  color: #403c3d;
-  height: 28px;
+  flex-direction: row; 
+  justify-content: center; 
+  gap: 10px; 
+  padding-top: 10px; 
 }
 
+#DivIcon svg {
+  color: #403c3d;
+  height: 28px; 
+}
+
+.ian-button {
+  background-color: #403C3D;
+  color: #fff;
+  width: 40rem;
+  height: 4.125rem;
+  padding-top: 1.5rem;
+  
+  border-radius: 65px;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+  border: 4px solid #000;
+  padding-top: 0.5em;
+  margin-left: 40rem;
+  margin-top: 2rem;
+}
+
+.ian-button-contate {
+  background-color: #403C3D;
+  opacity: 100%;
+  color: #fff;
+  width: 20rem;
+  height: 4.125rem;
+  padding-top: 0.5em;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 20rem;
+  border-radius: 65px;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+  border: 4px solid #000;
+}
+
+.ian-button-contate:hover, .ian-button:hover {
+  background-color: #706E6f;
+  cursor: pointer;
+  transition: ease .2s;
+  
+}
+
+@media (max-width: 768px) {
+  #ConteudoC {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  #listC {
+    gap: 15px; 
+  }
+
+  #DivIcon {
+    flex-direction: row; 
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #ConteudoC {
+    margin-left: 0; 
+    margin-top: 2rem; 
+    grid-template-columns: 1fr; 
+  }
+
+  #DivIcon {
+    flex-direction: row; 
+    gap: 5px;
+  }
+
+  #DivIcon svg {
+    height: 20px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .ian-button, .ian-button-contate {
+      font-size: 18px;
+      height: auto;
+  }
+
+}
+
+@media (max-width: 1200px) {
+
+  .ian-button {
+      width: 90%; 
+      margin-left: 0;
+      margin-right: 0;
+      top: auto; 
+  }
+
+  .ian-button-contate {
+      width: 90%; 
+      margin-left: 0;
+      margin-right: 0; 
+  }
+}
 /* .cerimonialista-box {
     border: 1px solid #000;
     border-radius: 60px;
@@ -141,3 +240,5 @@
     cursor: pointer;
     border: 4px solid #000;
 } */
+
+

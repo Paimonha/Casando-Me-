@@ -14,6 +14,7 @@ function Cerimonialista() {
   useEffect(() => {
     loadCerimo();
   }, []);
+  
   const loadCerimo = async () => {
     try {
       const response = await axios.get(
@@ -24,43 +25,48 @@ function Cerimonialista() {
       console.error("Erro ao carregar usuario:", error);
     }
   };
+
   return (
     <>
       <div>
         <Header />
       </div>
 
-
       <div id="ListaC">
-        
         <div id="ConteudoC">
-          {cerimonialistas.map((cerimonialistas) => (
-            <span key={cerimonialistas.id} id="listC">
+          {cerimonialistas.map((cerimonialista) => (
+            <div key={cerimonialista.id} id="listC"> {/* Alterado de span para div */}
               <div id="DivImg">
                 <img src={Elipse} alt="" />
               </div>
               <div id="DivInfo">
-                <h1>{cerimonialistas.nome}</h1>
-                <h3>{cerimonialistas.descricao}</h3>
+                <h1>{cerimonialista.nome}</h1>
+                <h3>{cerimonialista.descricao}</h3>
               </div>
               <div id="DivIcon">
-              <Link to={cerimonialistas.instagram} className="Icons"><FontAwesomeIcon icon={faInstagram} /></Link> 
-             <Link to={cerimonialistas.whatsapp} className="Icons"><FontAwesomeIcon icon={faWhatsapp} /></Link> 
-             <Link to={cerimonialistas.email} className="Icons"><FontAwesomeIcon icon={faEnvelope} /></Link> 
-                
+                <Link to={cerimonialista.instagram} className="Icons">
+                  <FontAwesomeIcon icon={faInstagram} />
+                </Link>
+                <Link to={cerimonialista.whatsapp} className="Icons">
+                  <FontAwesomeIcon icon={faWhatsapp} />
+                </Link>
+                <Link to={cerimonialista.email} className="Icons">
+                  <FontAwesomeIcon icon={faEnvelope} />
+                </Link>
               </div>
-              {/*               
-             
-
-             <span> {cerimonialistas.descricao}</span>
-             
-           */}
-            </span>
+            </div>
           ))}
         </div>
       </div>
-     
+
+      
+      <Link to="/cadastroc">
+      <div className="ian-button" id="ian-button">
+            Cadastre-se como cerimonialista
+      </div>
+      </Link>
     </>
   );
 }
+
 export default Cerimonialista;
