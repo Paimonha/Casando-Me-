@@ -23,7 +23,7 @@
   height: 45vh;
   background: url(image.png);
   border-radius: 22px;
-  /* Remover position: absolute para evitar sobreposição */
+ 
 }
 
 header {
@@ -59,8 +59,8 @@ header {
   background-color: #262626;
   color: #e3b8b3;
   border-radius: 65px;
-  width: 300px; /* Pode ser ajustado para 100% se você quiser que ocupe toda a largura */
-  height: 79px; /* Ajuste conforme necessário */
+  width: 300px; 
+  height: 79px; 
   font-size: 24px;
   font-family: "Inknut Antiqua", serif;
   font-weight: 700;
