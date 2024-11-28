@@ -11,7 +11,7 @@ O projeto **Casando-me** tem como objetivo conectar pessoas que estão planejand
 
 ## Tecnologias Utilizadas
 
-- **Frontend**: React, HTML, CSS, JavaScript
+- **Frontend**: React, HTML, CSS, JavaScript, Emailjs, axios, React-router-dom
 - **Backend**: Node.js, Express, Sequelize, Bcryptjs, Cors
 - **Banco de Dados**: Sqlite3
 - **Autenticação**: JWT (JSON Web Tokens)
